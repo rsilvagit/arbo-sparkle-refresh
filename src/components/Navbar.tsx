@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { TreePine, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const navLinks = [
   { label: "Home", href: "#" },
@@ -28,7 +29,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         <a href="#" className="flex items-center gap-2">
-          <TreePine className={`h-7 w-7 transition-colors ${scrolled ? "text-primary" : "text-accent"}`} />
+          <img src={logo} alt="Arbo Soluções" className="h-10 w-10 object-contain" />
           <span className={`font-display text-xl font-bold transition-colors ${scrolled ? "text-foreground" : "text-primary-foreground"}`}>
             Arbo Soluções
           </span>

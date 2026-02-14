@@ -1,4 +1,4 @@
-import { TreePine } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const FooterSection = () => {
   return (
@@ -7,7 +7,7 @@ const FooterSection = () => {
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <TreePine className="h-6 w-6 text-accent" />
+              <img src={logo} alt="Arbo Soluções" className="h-10 w-10 object-contain" />
               <span className="font-display text-xl font-bold text-background">Arbo Soluções</span>
             </div>
             <p className="font-sans text-background/60 text-sm leading-relaxed">
