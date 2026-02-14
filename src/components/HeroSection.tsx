@@ -9,6 +9,7 @@ const services = [
   "Análise de Risco em Árvores",
   "Plantios Compensatórios",
   "Licenciamento Ambiental",
+  "Monitoramento de Vegetação"
 ];
 
 const HeroSection = () => {
@@ -30,16 +31,12 @@ const HeroSection = () => {
           transition={{ duration: 0.8 }}
           className="max-w-4xl mx-auto"
         >
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <TreePine className="h-10 w-10 text-accent" />
-            <span className="text-accent font-sans text-lg tracking-widest uppercase font-semibold">
-              Arbo Soluções
+          
+          <h1 className="font-display text-5xl md:text-7xl font-bold text-primary-foreground mb-6 leading-loose">
+            <span className="block mb-4">Arbo Soluções</span>
+            <span className="block text-accent text-3xl md:text-5xl">
+              Corte e Poda de Árvores
             </span>
-          </div>
-
-          <h1 className="font-display text-5xl md:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
-            Soluções Ambientais <br />
-            <span className="text-accent">com Excelência</span>
           </h1>
 
           <p className="text-primary-foreground/80 font-sans text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
