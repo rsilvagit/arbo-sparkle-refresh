@@ -28,8 +28,8 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-2">
-          <img src={logo} alt="Arbo Soluções" className="h-10 w-10 object-contain" />
+        <a href="#" className="flex items-center gap-3">
+          <img src={logo} alt="Arbo Soluções" className="h-12 w-12 object-contain drop-shadow-sm" />
           <span className={`font-display text-xl font-bold transition-colors ${scrolled ? "text-foreground" : "text-primary-foreground"}`}>
             Arbo Soluções
           </span>
