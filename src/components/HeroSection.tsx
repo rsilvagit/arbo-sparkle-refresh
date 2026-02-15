@@ -32,8 +32,8 @@ const HeroSection = () => {
           className="max-w-4xl mx-auto"
         >
           
-          <h1 className="font-display text-5xl md:text-7xl font-bold text-primary-foreground mb-6 leading-loose">
-            <span className="block mb-4">Arbo Soluções</span>
+          <h1 className="font-display text-5xl md:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
+            <span className="block mb-1">Arbo Soluções</span>
             <span className="block text-accent text-3xl md:text-5xl">
               Corte e Poda de Árvores
             </span>
