@@ -56,11 +56,14 @@ const ContactFormModal = ({ children }: ContactFormModalProps) => {
       `*Solicitação de Orçamento*`,
       ``,
       `*Nome:* ${form.name.trim()}`,
-      form.address.trim() ? `*Endereço:* ${form.address.trim()}` : "",
+      ``,
+      form.address.trim() ? `*Endereço:* ${form.address.trim()}\n` : "",
       `*Telefone:* ${form.phone.trim()}`,
-      form.email.trim() ? `*E-mail:* ${form.email.trim()}` : "",
+      ``,
+      form.email.trim() ? `*E-mail:* ${form.email.trim()}\n` : "",
       `*Tipo de Manejo:* ${form.serviceType}`,
-      form.description.trim() ? `\n*Descrição:*\n${form.description.trim()}` : "",
+      ``,
+      form.description.trim() ? `*Descrição:*\n${form.description.trim()}` : "",
     ]
       .filter(Boolean)
       .join("\n");
