@@ -29,7 +29,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         <a href="#" className="flex items-center gap-3">
-          <img src={logo} alt="Arbo Soluções" className="h-14 w-14 object-contain drop-shadow-sm" />
+          <img src={logo} alt="Arbo Soluções" className="h-16 w-16 object-contain drop-shadow-md transition-transform duration-300 hover:scale-110" />
           <span className={`font-display text-xl font-bold transition-colors ${scrolled ? "text-foreground" : "text-primary-foreground"}`}>
             Arbo Soluções
           </span>
