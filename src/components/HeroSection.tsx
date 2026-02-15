@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import heroBg from "@/assets/hero-bg.jpg";
-import { TreePine, Phone, ChevronDown } from "lucide-react";
+import { Phone, ChevronDown } from "lucide-react";
+import ContactFormModal from "./ContactFormModal";
 
 const services = [
   "Consultoria Ambiental",
@@ -55,16 +56,15 @@ const HeroSection = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="https://wa.me/5551984843008"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-sans font-semibold text-accent-foreground transition-all duration-300 hover:scale-105 hover:shadow-xl"
-              style={{ background: "var(--cta-gradient)" }}
-            >
-              <Phone className="h-5 w-5" />
-              Solicite um Orçamento
-            </a>
+            <ContactFormModal>
+              <button
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-sans font-semibold text-accent-foreground transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                style={{ background: "var(--cta-gradient)" }}
+              >
+                <Phone className="h-5 w-5" />
+                Solicite um Orçamento
+              </button>
+            </ContactFormModal>
             <a
               href="#quem-somos"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-sans font-semibold border border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 transition-all duration-300"
