@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin } from "lucide-react";
+import ContactFormModal from "./ContactFormModal";
 
 const ContactSection = () => {
   return (
@@ -27,15 +28,12 @@ const ContactSection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
-            <a
-              href="https://wa.me/5551984843008"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-8 py-4 rounded-lg bg-background text-primary font-sans font-bold text-lg hover:scale-105 transition-transform duration-300 shadow-xl"
-            >
-              <Phone className="h-6 w-6" />
-              (51) 98484-3008
-            </a>
+            <ContactFormModal>
+              <button className="inline-flex items-center gap-3 px-8 py-4 rounded-lg bg-background text-primary font-sans font-bold text-lg hover:scale-105 transition-transform duration-300 shadow-xl">
+                <Phone className="h-6 w-6" />
+                Solicitar Orçamento
+              </button>
+            </ContactFormModal>
             <a
               href="mailto:arbopodasejardinagem@gmail.com"
               className="inline-flex items-center gap-3 text-accent-foreground/90 font-sans hover:text-accent-foreground transition-colors"
