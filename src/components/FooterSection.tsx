@@ -7,7 +7,7 @@ const FooterSection = () => {
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <img src={logo} alt="Arbo Soluções" className="h-12 w-12 object-contain" />
+              <img src={logo} alt="Arbo Soluções" className="h-12 w-12 object-contain opacity-85" />
               <span className="font-display text-xl font-bold text-background">Arbo Soluções</span>
             </div>
             <p className="font-sans text-background/60 text-sm leading-relaxed">
