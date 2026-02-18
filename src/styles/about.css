@@ -1,0 +1,75 @@
+.about {
+  padding: 6rem 0;
+  background: var(--section-gradient);
+}
+
+.about__header {
+  max-width: 56rem;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.about__heading {
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .about__heading {
+    font-size: 3rem;
+  }
+}
+
+.about__text {
+  color: hsl(var(--muted-foreground));
+  font-family: var(--font-sans);
+  font-size: 1.125rem;
+  line-height: 1.625;
+  margin-bottom: 1.5rem;
+}
+
+.about__text:last-of-type {
+  margin-bottom: 0;
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .about__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.about__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  background-color: hsl(var(--background));
+  border: 1px solid hsl(var(--border));
+}
+
+.about__card svg {
+  width: 2rem;
+  height: 2rem;
+  color: hsl(var(--primary));
+}
+
+.about__card-label {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: hsl(var(--foreground));
+  text-align: center;
+}

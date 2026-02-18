@@ -1,0 +1,89 @@
+.footer {
+  padding: 4rem 0;
+  background-color: hsl(var(--foreground));
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .footer__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.footer__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.footer__logo {
+  height: 3rem;
+  width: 3rem;
+  object-fit: contain;
+  opacity: 0.85;
+}
+
+.footer__brand-name {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: hsl(var(--background));
+}
+
+.footer__tagline {
+  font-family: var(--font-sans);
+  color: hsl(var(--background) / 0.6);
+  font-size: 0.875rem;
+  line-height: 1.625;
+}
+
+.footer__col-title {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: hsl(var(--background));
+  margin-bottom: 1rem;
+}
+
+.footer__info {
+  font-family: var(--font-sans);
+  color: hsl(var(--background) / 0.7);
+  font-size: 0.875rem;
+  line-height: 1.75;
+}
+
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer__nav-link {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  color: hsl(var(--background) / 0.7);
+  transition: color 0.15s ease;
+}
+
+.footer__nav-link:hover {
+  color: hsl(var(--accent));
+}
+
+.footer__bottom {
+  border-top: 1px solid hsl(var(--background) / 0.1);
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.footer__copyright {
+  font-family: var(--font-sans);
+  color: hsl(var(--background) / 0.4);
+  font-size: 0.875rem;
+}

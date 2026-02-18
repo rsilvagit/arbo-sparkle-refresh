@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,14 +13,12 @@
     <meta property="og:description" content="Soluções ambientais com excelência desde 2014. Laudos, podas, licenciamento e análise de risco arbóreo em Porto Alegre e região." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.arbosolucoes.com" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:site_name" content="Arbo Soluções" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Arbo Soluções | Consultoria Ambiental" />
     <meta name="twitter:description" content="Consultoria ambiental em Porto Alegre desde 2014. Laudos técnicos, podas, licenciamento ambiental." />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
     <script type="application/ld+json">
     {
@@ -39,14 +37,341 @@
       },
       "foundingDate": "2014",
       "areaServed": "Porto Alegre e região metropolitana",
-      "priceRange": "$$",
-      "sameAs": []
+      "priceRange": "$$"
     }
     </script>
   </head>
 
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- ===== NAVBAR ===== -->
+    <header id="navbar" class="navbar">
+      <div class="container navbar__inner">
+        <a href="#" class="navbar__brand">
+          <img src="/images/logo.png" alt="Arbo Soluções" class="navbar__logo" />
+          <span class="navbar__title">Arbo Soluções</span>
+        </a>
+        <nav class="navbar__links">
+          <a href="#" class="navbar__link">Home</a>
+          <a href="#quem-somos" class="navbar__link">Quem Somos</a>
+          <a href="#servicos" class="navbar__link">Serviços</a>
+          <a href="#contato" class="navbar__link">Contato</a>
+          <a href="https://wa.me/5551984843008" target="_blank" rel="noopener noreferrer" class="navbar__cta">(51) 98484-3008</a>
+        </nav>
+        <button class="navbar__hamburger" id="hamburger-btn" aria-label="Menu" aria-expanded="false">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="navbar__mobile-menu" id="mobile-menu">
+        <a href="#" class="navbar__mobile-link">Home</a>
+        <a href="#quem-somos" class="navbar__mobile-link">Quem Somos</a>
+        <a href="#servicos" class="navbar__mobile-link">Serviços</a>
+        <a href="#contato" class="navbar__mobile-link">Contato</a>
+        <a href="https://wa.me/5551984843008" target="_blank" rel="noopener noreferrer" class="navbar__mobile-phone">(51) 98484-3008</a>
+      </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+      <div class="hero__bg"></div>
+      <div class="hero__overlay"></div>
+      <div class="hero__content container">
+        <div class="hero__inner hero__text">
+          <h1 class="hero__title">
+            <span class="hero__title-main">Arbo Soluções</span>
+            <span class="hero__title-sub">Corte e Poda de Árvores</span>
+          </h1>
+          <p class="hero__subtitle">Manejo seguro e responsável da vegetação urbana desde 2014. Segurança, preservação e respeito às normas ambientais.</p>
+          <div class="hero__pills">
+            <a href="/arbo-sparkle-refresh/servicos/consultoria-ambiental/" class="hero__pill">Consultoria Ambiental</a>
+            <a href="/arbo-sparkle-refresh/servicos/laudos-tecnicos/" class="hero__pill">Laudos Técnicos</a>
+            <a href="/arbo-sparkle-refresh/servicos/poda-remocao/" class="hero__pill">Poda e Remoção de Árvores</a>
+            <a href="/arbo-sparkle-refresh/servicos/analise-risco/" class="hero__pill">Análise de Risco em Árvores</a>
+            <a href="/arbo-sparkle-refresh/servicos/plantios-compensatorios/" class="hero__pill">Plantios Compensatórios</a>
+            <a href="/arbo-sparkle-refresh/servicos/licenciamento-ambiental/" class="hero__pill">Licenciamento Ambiental</a>
+            <a href="/arbo-sparkle-refresh/servicos/monitoramento-vegetacao/" class="hero__pill">Monitoramento de Vegetação</a>
+          </div>
+          <div class="hero__cta-group">
+            <button class="btn btn--cta" data-open-modal="contact">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Solicite um Orçamento
+            </button>
+            <a href="#quem-somos" class="btn btn--outline-light">Conheça a Empresa</a>
+          </div>
+        </div>
+        <div class="hero__scroll-indicator">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="animate-bounce"><path d="m6 9 6 6 6-6"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="quem-somos" class="about">
+      <div class="container">
+        <div class="about__header anim-target" data-anim="fade-up">
+          <span class="section-label">Quem Somos</span>
+          <h2 class="about__heading">Compromisso com a <span class="text-primary">natureza urbana</span></h2>
+          <p class="about__text">A Arbo Soluções atua no setor de manejo da vegetação urbana: poda, remoção e tratamento de árvores. Nosso trabalho tem como foco a segurança das pessoas, a preservação ambiental e a compatibilização da arborização com edificações e infraestruturas existentes.</p>
+          <p class="about__text">A empresa conta com a atuação e responsabilidade técnica de bióloga formada pela UFRGS, especialista em Botânica e Arborização Urbana pela UNIFESP, com atuação desde 2010 na área de manejo vegetal.</p>
+        </div>
+        <div class="about__grid">
+          <div class="about__card anim-target" data-anim="fade-up" data-anim-delay="0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
+            <span class="about__card-label">Segurança</span>
+          </div>
+          <div class="about__card anim-target" data-anim="fade-up" data-anim-delay="100">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg>
+            <span class="about__card-label">CRBio Registrada</span>
+          </div>
+          <div class="about__card anim-target" data-anim="fade-up" data-anim-delay="200">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span class="about__card-label">Desde 2014</span>
+          </div>
+          <div class="about__card anim-target" data-anim="fade-up" data-anim-delay="300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.9C15.5 4.9 17 3.5 17 3.5s1.5 2.5-.8 6.5"/><path d="M20.1 17.8c.6-1.5.9-3.2.9-5a10 10 0 0 0-.9-4.2"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+            <span class="about__card-label">Sustentabilidade</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section id="servicos" class="services">
+      <div class="container">
+        <div class="services__header anim-target" data-anim="fade-up">
+          <span class="section-label">Serviços</span>
+          <h2 class="services__heading">Nossos <span class="text-primary">Serviços</span></h2>
+        </div>
+        <div class="services__grid">
+          <div class="services__card anim-target" data-anim="fade-up" data-anim-delay="0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+            <h3 class="services__card-title">Laudos Técnicos</h3>
+            <p class="services__card-desc">Laudos para corte e/ou poda de árvores</p>
+          </div>
+          <div class="services__card anim-target" data-anim="fade-up" data-anim-delay="50">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><path d="M8.12 8.12 12 12"/><path d="M20 4 8.12 15.88"/><circle cx="6" cy="18" r="3"/><path d="M14.8 14.8 20 20"/></svg>
+            <h3 class="services__card-title">Poda e Remoção</h3>
+            <p class="services__card-desc">Serviços seguros de poda e remoção de árvores</p>
+          </div>
+          <div class="services__card anim-target" data-anim="fade-up" data-anim-delay="100">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+            <h3 class="services__card-title">Análise de Risco</h3>
+            <p class="services__card-desc">Avaliação fitossanitária e análise de risco arbóreo</p>
+          </div>
+          <div class="services__card anim-target" data-anim="fade-up" data-anim-delay="150">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg>
+            <h3 class="services__card-title">Plantios Compensatórios</h3>
+            <p class="services__card-desc">Monitoramento e execução de plantios</p>
+          </div>
+          <div class="services__card anim-target" data-anim="fade-up" data-anim-delay="200">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <h3 class="services__card-title">Cobertura Vegetal</h3>
+            <p class="services__card-desc">Laudo de cobertura vegetal para licenciamento</p>
+          </div>
+          <div class="services__card anim-target" data-anim="fade-up" data-anim-delay="250">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m9 15 2 2 4-4"/></svg>
+            <h3 class="services__card-title">Autorizações</h3>
+            <p class="services__card-desc">Obtenção de autorizações junto a órgãos ambientais</p>
+          </div>
+          <div class="services__card anim-target" data-anim="fade-up" data-anim-delay="300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg>
+            <h3 class="services__card-title">Consultoria Ambiental</h3>
+            <p class="services__card-desc">Consultoria e projetos de transplante vegetal</p>
+          </div>
+          <div class="services__card anim-target" data-anim="fade-up" data-anim-delay="350">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg>
+            <h3 class="services__card-title">Licenciamento</h3>
+            <p class="services__card-desc">Licenciamento ambiental completo</p>
+          </div>
+          <div class="services__card anim-target" data-anim="fade-up" data-anim-delay="400">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 22h14"/><path d="M19.27 13.73A2.5 2.5 0 0 0 17.5 13h-11A2.5 2.5 0 0 0 4 15.5V17a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-1.5c0-.66-.26-1.3-.73-1.77"/><path d="M14 13V8.5C14 7 15 7 15 5a3 3 0 0 0-3-3c-1.66 0-3 1-3 3s1 2 1 3.5V13"/></svg>
+            <h3 class="services__card-title">ART</h3>
+            <p class="services__card-desc">Anotação de Responsabilidade Técnica</p>
+          </div>
+          <div class="services__card anim-target" data-anim="fade-up" data-anim-delay="450">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 12H3"/><path d="M17 18H3"/><path d="M17 6H3"/><path d="m11 17 2 2 4-4"/></svg>
+            <h3 class="services__card-title">Responsabilidade Técnica</h3>
+            <p class="services__card-desc">Responsabilidade técnica de empresas</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section id="depoimentos" class="testimonials">
+      <div class="container">
+        <div class="testimonials__header anim-target" data-anim="fade-up">
+          <span class="section-label">Depoimentos</span>
+          <h2 class="testimonials__heading">O que nossos <span class="text-primary">clientes</span> dizem</h2>
+        </div>
+        <div class="testimonials__grid">
+          <div class="testimonials__card anim-target" data-anim="fade-up" data-anim-delay="0">
+            <svg class="testimonials__quote-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/></svg>
+            <div class="testimonials__stars"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+            <p class="testimonials__text">"A Arbo Soluções foi extremamente profissional na remoção de árvores de risco no nosso condomínio. Laudo técnico impecável e equipe muito competente."</p>
+            <div><p class="testimonials__name">Carlos M.</p><p class="testimonials__role">Síndico – Condomínio Residencial</p></div>
+          </div>
+          <div class="testimonials__card anim-target" data-anim="fade-up" data-anim-delay="100">
+            <svg class="testimonials__quote-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/></svg>
+            <div class="testimonials__stars"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+            <p class="testimonials__text">"Contratamos a Arbo para o licenciamento ambiental de um empreendimento. O atendimento foi ágil, e toda a documentação foi entregue dentro do prazo."</p>
+            <div><p class="testimonials__name">Fernanda L.</p><p class="testimonials__role">Engenheira Civil</p></div>
+          </div>
+          <div class="testimonials__card anim-target" data-anim="fade-up" data-anim-delay="200">
+            <svg class="testimonials__quote-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/></svg>
+            <div class="testimonials__stars"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+            <p class="testimonials__text">"Excelente trabalho de poda e manutenção da arborização. A bióloga Andrea demonstrou conhecimento técnico excepcional e cuidado com a preservação."</p>
+            <div><p class="testimonials__name">Roberto S.</p><p class="testimonials__role">Administrador – Shopping Center</p></div>
+          </div>
+          <div class="testimonials__card anim-target" data-anim="fade-up" data-anim-delay="300">
+            <svg class="testimonials__quote-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/></svg>
+            <div class="testimonials__stars"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+            <p class="testimonials__text">"Precisava de um laudo urgente para remoção de uma árvore em risco. A Arbo atendeu rapidamente e resolveu tudo com muita segurança e profissionalismo."</p>
+            <div><p class="testimonials__name">Juliana P.</p><p class="testimonials__role">Proprietária Residencial</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CLIENTS ===== -->
+    <section id="clientes" class="clients">
+      <div class="container">
+        <div class="clients__header anim-target" data-anim="fade-up">
+          <span class="section-label">Confiança</span>
+          <h2 class="clients__heading">Quem <span class="text-primary">confia</span> na Arbo</h2>
+        </div>
+        <div class="clients__grid">
+          <div class="clients__card anim-target" data-anim="scale-in" data-anim-delay="0"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg><span class="clients__card-name">Prefeitura de Porto Alegre</span></div>
+          <div class="clients__card anim-target" data-anim="scale-in" data-anim-delay="50"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg><span class="clients__card-name">CEEE Equatorial</span></div>
+          <div class="clients__card anim-target" data-anim="scale-in" data-anim-delay="100"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg><span class="clients__card-name">Grupo Zaffari</span></div>
+          <div class="clients__card anim-target" data-anim="scale-in" data-anim-delay="150"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg><span class="clients__card-name">Melnick Even</span></div>
+          <div class="clients__card anim-target" data-anim="scale-in" data-anim-delay="200"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg><span class="clients__card-name">Multiplan</span></div>
+          <div class="clients__card anim-target" data-anim="scale-in" data-anim-delay="250"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg><span class="clients__card-name">Goldsztein Cyrela</span></div>
+          <div class="clients__card anim-target" data-anim="scale-in" data-anim-delay="300"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg><span class="clients__card-name">Hospital Moinhos de Vento</span></div>
+          <div class="clients__card anim-target" data-anim="scale-in" data-anim-delay="350"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg><span class="clients__card-name">Sindicatos e Condomínios</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT CTA ===== -->
+    <section id="contato" class="contact-cta">
+      <div class="contact-cta__bg"></div>
+      <div class="contact-cta__content container">
+        <div class="contact-cta__inner anim-target" data-anim="fade-up">
+          <h2 class="contact-cta__heading">Solicite seu Orçamento Gratuito</h2>
+          <p class="contact-cta__subtitle">Agende uma visita técnica. Vistoria gratuita em Porto Alegre.*</p>
+          <p class="contact-cta__note">*Consulte demais localidades.</p>
+          <div class="contact-cta__actions">
+            <button class="btn btn--cta-inverse" data-open-modal="contact">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Solicitar Orçamento
+            </button>
+            <a href="mailto:arbopodasejardinagem@gmail.com" class="contact-cta__email">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              arbopodasejardinagem@gmail.com
+            </a>
+          </div>
+          <div class="contact-cta__location">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            Porto Alegre, RS
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div>
+            <div class="footer__brand">
+              <img src="/images/logo.png" alt="Arbo Soluções" class="footer__logo" />
+              <span class="footer__brand-name">Arbo Soluções</span>
+            </div>
+            <p class="footer__tagline">Soluções ambientais com segurança, responsabilidade e respeito às normas desde 2014.</p>
+          </div>
+          <div>
+            <h4 class="footer__col-title">Responsável Técnica</h4>
+            <div class="footer__info">
+              <p>Biól. Andrea Saldanha Weber - UFRGS</p>
+              <p>Esp. Arborização Urbana - UNIFESP</p>
+              <p>Esp. Botânica - CRBio03</p>
+              <p>CRBio- 53432-03D</p>
+            </div>
+          </div>
+          <div>
+            <h4 class="footer__col-title">Navegação</h4>
+            <nav class="footer__nav">
+              <a href="#quem-somos" class="footer__nav-link">Quem Somos</a>
+              <a href="#servicos" class="footer__nav-link">Serviços</a>
+              <a href="#contato" class="footer__nav-link">Contato</a>
+              <a href="https://wa.me/5551984843008" target="_blank" rel="noopener noreferrer" class="footer__nav-link">WhatsApp</a>
+            </nav>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p class="footer__copyright">&copy; <span id="footer-year"></span> Arbo Soluções. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===== CONTACT MODAL ===== -->
+    <dialog id="contact-dialog" class="contact-dialog">
+      <div class="contact-dialog__inner">
+        <div class="contact-dialog__header">
+          <h2 class="contact-dialog__title">Solicite seu Orçamento</h2>
+          <button class="contact-dialog__close" id="dialog-close-btn" aria-label="Fechar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+          </button>
+        </div>
+        <form id="contact-form" class="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name" class="form-label">Nome *</label>
+            <input type="text" id="name" name="name" placeholder="Seu nome completo" maxlength="100" class="form-input" />
+          </div>
+          <div class="form-group">
+            <label for="address" class="form-label">Endereço</label>
+            <input type="text" id="address" name="address" placeholder="Rua, número, bairro" maxlength="200" class="form-input" />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone" class="form-label">Telefone *</label>
+              <input type="tel" id="phone" name="phone" placeholder="(51) 99999-9999" maxlength="20" class="form-input" />
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="seu@email.com" maxlength="255" class="form-input" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="serviceType" class="form-label">Tipo de Manejo *</label>
+            <select id="serviceType" name="serviceType" class="form-select">
+              <option value="" disabled selected>Selecione o serviço</option>
+              <option value="Poda de Árvores">Poda de Árvores</option>
+              <option value="Remoção / Corte de Árvores">Remoção / Corte de Árvores</option>
+              <option value="Análise de Risco">Análise de Risco</option>
+              <option value="Laudo Técnico">Laudo Técnico</option>
+              <option value="Consultoria Ambiental">Consultoria Ambiental</option>
+              <option value="Plantio Compensatório">Plantio Compensatório</option>
+              <option value="Licenciamento Ambiental">Licenciamento Ambiental</option>
+              <option value="Monitoramento de Vegetação">Monitoramento de Vegetação</option>
+              <option value="Outro">Outro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="description" class="form-label">Descrição</label>
+            <textarea id="description" name="description" rows="4" maxlength="1000" placeholder="Descreva sua necessidade..." class="form-textarea"></textarea>
+          </div>
+          <button type="submit" class="btn btn--submit">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg>
+            Enviar pelo WhatsApp
+          </button>
+        </form>
+      </div>
+    </dialog>
+
+    <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
