@@ -15,10 +15,18 @@
     <meta property="og:url" content="https://www.arbosolucoes.com" />
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:site_name" content="Arbo Soluções" />
+    <meta property="og:image" content="https://www.arbosolucoes.com/images/hero-bg.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Arbo Soluções | Consultoria Ambiental" />
     <meta name="twitter:description" content="Consultoria ambiental em Porto Alegre desde 2014. Laudos técnicos, podas, licenciamento ambiental." />
+    <meta name="twitter:image" content="https://www.arbosolucoes.com/images/hero-bg.jpg" />
+
+    <meta name="robots" content="index, follow" />
+    <meta name="geo.region" content="BR-RS" />
+    <meta name="geo.placename" content="Porto Alegre" />
 
     <script type="application/ld+json">
     {
@@ -27,6 +35,7 @@
       "name": "Arbo Soluções",
       "description": "Consultoria ambiental em Porto Alegre desde 2014. Laudos técnicos, poda e remoção de árvores, licenciamento ambiental.",
       "url": "https://www.arbosolucoes.com",
+      "image": "https://www.arbosolucoes.com/images/hero-bg.jpg",
       "telephone": "+5551984843008",
       "email": "arbopodasejardinagem@gmail.com",
       "address": {
@@ -35,9 +44,27 @@
         "addressRegion": "RS",
         "addressCountry": "BR"
       },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-30.0346",
+        "longitude": "-51.2177"
+      },
       "foundingDate": "2014",
       "areaServed": "Porto Alegre e região metropolitana",
-      "priceRange": "$$"
+      "priceRange": "$$",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Serviços Ambientais",
+        "itemListElement": [
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Consultoria Ambiental", "url": "https://www.arbosolucoes.com/servicos/consultoria-ambiental/"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Laudos Técnicos", "url": "https://www.arbosolucoes.com/servicos/laudos-tecnicos/"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Poda e Remoção de Árvores", "url": "https://www.arbosolucoes.com/servicos/poda-remocao/"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Análise de Risco em Árvores", "url": "https://www.arbosolucoes.com/servicos/analise-risco/"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Plantios Compensatórios", "url": "https://www.arbosolucoes.com/servicos/plantios-compensatorios/"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Licenciamento Ambiental", "url": "https://www.arbosolucoes.com/servicos/licenciamento-ambiental/"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Monitoramento de Vegetação", "url": "https://www.arbosolucoes.com/servicos/monitoramento-vegetacao/"}}
+        ]
+      }
     }
     </script>
   </head>
@@ -371,6 +398,19 @@
     </dialog>
 
     <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+    <!-- ===== COOKIE CONSENT (LGPD) ===== -->
+    <div id="cookie-consent" class="cookie-consent cookie-consent--hidden" role="dialog" aria-label="Consentimento de cookies">
+      <div class="cookie-consent__inner container">
+        <div class="cookie-consent__text">
+          <p>Utilizamos cookies e tecnologias semelhantes para melhorar sua experiência de navegação e analisar o tráfego do site. Ao continuar navegando, você concorda com nossa <a href="#" class="cookie-consent__link">Política de Privacidade</a>.</p>
+        </div>
+        <div class="cookie-consent__actions">
+          <button id="cookie-accept" class="btn btn--cta cookie-consent__btn">Aceitar</button>
+          <button id="cookie-reject" class="cookie-consent__btn cookie-consent__btn--outline">Rejeitar</button>
+        </div>
+      </div>
+    </div>
 
     <script type="module" src="/src/main.ts"></script>
   </body>
