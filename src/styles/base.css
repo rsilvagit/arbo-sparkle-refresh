@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
-
 body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
   font-family: var(--font-sans);
   line-height: 1.6;
+  opacity: 1;
 }
 
 h1, h2, h3, h4, h5, h6 {
