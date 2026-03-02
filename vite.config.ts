@@ -23,6 +23,7 @@ export default defineConfig({
         "plantios-compensatorios": resolve(__dirname, "servicos/plantios-compensatorios/index.html"),
         "licenciamento-ambiental": resolve(__dirname, "servicos/licenciamento-ambiental/index.html"),
         "monitoramento-vegetacao": resolve(__dirname, "servicos/monitoramento-vegetacao/index.html"),
+        "corte-arvores": resolve(__dirname, "servicos/corte-arvores/index.html"),
       },
     },
   },
