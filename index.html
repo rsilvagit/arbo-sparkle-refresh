@@ -29,6 +29,9 @@
     <meta name="geo.region" content="BR-RS" />
     <meta name="geo.placename" content="Porto Alegre" />
 
+    <!-- Preload hero background for faster LCP -->
+    <link rel="preload" as="image" href="/images/hero-bg.jpg" />
+
     <!-- Google Fonts (preconnect + stylesheet for faster loading) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -63,6 +66,46 @@
       "foundingDate": "2014",
       "areaServed": "Porto Alegre e região metropolitana",
       "priceRange": "$$",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "19",
+        "reviewCount": "19"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+          "author": {"@type": "Person", "name": "Ivo"},
+          "reviewBody": "Agradecemos a Arbo pelo excelente serviço prestado. A remoção do pinheiro ocorreu de forma rápida, minimamente invasiva, como prometido. Parabéns!"
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+          "author": {"@type": "Person", "name": "Mônica"},
+          "reviewBody": "Trabalho impecável, super bem feito, de forma rápida, segura e organizada. Depois do trabalho concluído a equipe deixou o local limpo! Super recomendo!"
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+          "author": {"@type": "Person", "name": "Antônio Carlos"},
+          "reviewBody": "Serviço excelente, cumprem agendas. Pessoal muito profissional, bióloga qualificada, possuem estrutura de atendimento para os serviços a que se propõem."
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+          "author": {"@type": "Person", "name": "Gabriela"},
+          "reviewBody": "Atendimento impecável! Desde o processo burocrático com os órgãos regulamentares até a finalização do corte das árvores. Todos profissionais altamente qualificados."
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+          "author": {"@type": "Person", "name": "Weimar"},
+          "reviewBody": "O serviço de corte da árvore foi realizado com grande profissionalismo, começando pela qualidade do contrato apresentado e passando pelas garantias que tivemos."
+        }
+      ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Serviços Ambientais",
@@ -322,7 +365,7 @@
         <div class="footer__grid">
           <div>
             <div class="footer__brand">
-              <img src="/images/logo.png" alt="Arbo Soluções" class="footer__logo" />
+              <img src="/images/logo.png" alt="Arbo Soluções" class="footer__logo" loading="lazy" width="40" height="40" />
               <span class="footer__brand-name">Arbo Soluções</span>
             </div>
             <p class="footer__tagline">Soluções ambientais com segurança, responsabilidade e respeito às normas desde 2014.</p>
