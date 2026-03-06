@@ -26,6 +26,9 @@
   <meta name="twitter:description" content="Assessoria ambiental completa para construtoras e empreendimentos em Porto Alegre. Bióloga CRBio, gestão de vegetação e acompanhamento junto a órgãos ambientais." />
   <meta name="twitter:image" content="https://www.arbosolucoes.com/images/logo.png" />
 
+  <!-- Preload hero background for faster LCP -->
+  <link rel="preload" as="image" href="/images/hero-bg.jpg" />
+
   <!-- Google Fonts (preconnect + stylesheet for faster loading) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -56,39 +59,21 @@
         "addressCountry": "BR"
       }
     },
-    "areaServed": "Porto Alegre e região metropolitana"
+    "areaServed": "Porto Alegre e região metropolitana",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1",
+      "ratingCount": "19",
+      "reviewCount": "19"
+    }
   }
   </script>
 </head>
 <body>
-  <!-- NAVBAR -->
-  <header id="navbar" class="navbar">
-    <div class="container navbar__inner">
-      <a href="/arbo-sparkle-refresh/" class="navbar__brand">
-        <img src="/images/logo.png" alt="Arbo Soluções" class="navbar__logo" />
-        <span class="navbar__title">Arbo Soluções</span>
-      </a>
-      <nav class="navbar__links">
-        <a href="/arbo-sparkle-refresh/" class="navbar__link">Home</a>
-        <a href="/arbo-sparkle-refresh/#quem-somos" class="navbar__link">Quem Somos</a>
-        <a href="/arbo-sparkle-refresh/#servicos" class="navbar__link">Serviços</a>
-        <a href="/arbo-sparkle-refresh/#contato" class="navbar__link">Contato</a>
-        <a href="https://wa.me/5551984843008" target="_blank" rel="noopener noreferrer" class="navbar__cta">(51) 98484-3008</a>
-      </nav>
-      <button class="navbar__hamburger" id="hamburger-btn" aria-label="Menu" aria-expanded="false">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
-      </button>
-    </div>
-    <div class="navbar__mobile-menu" id="mobile-menu">
-      <a href="/arbo-sparkle-refresh/" class="navbar__mobile-link">Home</a>
-      <a href="/arbo-sparkle-refresh/#quem-somos" class="navbar__mobile-link">Quem Somos</a>
-      <a href="/arbo-sparkle-refresh/#servicos" class="navbar__mobile-link">Serviços</a>
-      <a href="/arbo-sparkle-refresh/#contato" class="navbar__mobile-link">Contato</a>
-      <a href="https://wa.me/5551984843008" target="_blank" rel="noopener noreferrer" class="navbar__mobile-phone">(51) 98484-3008</a>
-    </div>
-  </header>
 
-  <!-- SERVICE HERO -->
+<!-- SERVICE HERO -->
   <section class="service-hero">
     <div class="service-hero__bg"></div>
     <div class="service-hero__overlay"></div>
@@ -220,111 +205,6 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__grid">
-        <div>
-          <div class="footer__brand">
-            <img src="/images/logo.png" alt="Arbo Soluções" class="footer__logo" />
-            <span class="footer__brand-name">Arbo Soluções</span>
-          </div>
-          <p class="footer__tagline">Soluções ambientais com segurança, responsabilidade e respeito às normas desde 2014.</p>
-        </div>
-        <div>
-          <h4 class="footer__col-title">Responsável Técnica</h4>
-          <div class="footer__info">
-            <p>Biól. Andrea Saldanha Weber - UFRGS</p>
-            <p>Esp. Arborização Urbana - UNIFESP</p>
-            <p>Esp. Botânica - CRBio03</p>
-            <p>CRBio- 53432-03D</p>
-          </div>
-        </div>
-        <div>
-          <h4 class="footer__col-title">Navegação</h4>
-          <nav class="footer__nav">
-            <a href="/arbo-sparkle-refresh/#quem-somos" class="footer__nav-link">Quem Somos</a>
-            <a href="/arbo-sparkle-refresh/#servicos" class="footer__nav-link">Serviços</a>
-            <a href="/arbo-sparkle-refresh/#contato" class="footer__nav-link">Contato</a>
-            <a href="https://wa.me/5551984843008" target="_blank" rel="noopener noreferrer" class="footer__nav-link">WhatsApp</a>
-          </nav>
-        </div>
-      </div>
-      <div class="footer__bottom">
-        <p class="footer__copyright">&copy; <span id="footer-year"></span> Arbo Soluções. Todos os direitos reservados.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- CONTACT MODAL -->
-  <dialog id="contact-dialog" class="contact-dialog">
-    <div class="contact-dialog__inner">
-      <div class="contact-dialog__header">
-        <h2 class="contact-dialog__title">Solicite seu Orçamento</h2>
-        <button class="contact-dialog__close" id="dialog-close-btn" aria-label="Fechar">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-        </button>
-      </div>
-      <form id="contact-form" class="contact-form" novalidate>
-        <div class="form-group">
-          <label for="name" class="form-label">Nome *</label>
-          <input type="text" id="name" name="name" placeholder="Seu nome completo" maxlength="100" class="form-input" />
-        </div>
-        <div class="form-group">
-          <label for="address" class="form-label">Endereço</label>
-          <input type="text" id="address" name="address" placeholder="Rua, número, bairro" maxlength="200" class="form-input" />
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="phone" class="form-label">Telefone *</label>
-            <input type="tel" id="phone" name="phone" placeholder="(51) 99999-9999" maxlength="20" class="form-input" />
-          </div>
-          <div class="form-group">
-            <label for="email" class="form-label">E-mail</label>
-            <input type="email" id="email" name="email" placeholder="seu@email.com" maxlength="255" class="form-input" />
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="serviceType" class="form-label">Tipo de Manejo *</label>
-          <select id="serviceType" name="serviceType" class="form-select">
-            <option value="" disabled selected>Selecione o serviço</option>
-            <option value="Poda de Árvores">Poda de Árvores</option>
-            <option value="Remoção / Corte de Árvores">Remoção / Corte de Árvores</option>
-            <option value="Análise de Risco">Análise de Risco</option>
-            <option value="Laudo Técnico">Laudo Técnico</option>
-            <option value="Consultoria Ambiental">Consultoria Ambiental</option>
-            <option value="Plantio Compensatório">Plantio Compensatório</option>
-            <option value="Licenciamento Ambiental">Licenciamento Ambiental</option>
-            <option value="Monitoramento de Vegetação">Monitoramento de Vegetação</option>
-            <option value="Outro">Outro</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="description" class="form-label">Descrição</label>
-          <textarea id="description" name="description" rows="4" maxlength="1000" placeholder="Descreva sua necessidade..." class="form-textarea"></textarea>
-        </div>
-        <button type="submit" class="btn btn--submit">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg>
-          Enviar pelo WhatsApp
-        </button>
-      </form>
-    </div>
-  </dialog>
-  <div id="toast-container" class="toast-container" aria-live="polite"></div>
-
-  <!-- COOKIE CONSENT (LGPD) -->
-  <div id="cookie-consent" class="cookie-consent cookie-consent--hidden" role="dialog" aria-label="Consentimento de cookies">
-    <div class="cookie-consent__inner container">
-      <div class="cookie-consent__text">
-        <p>Utilizamos cookies e tecnologias semelhantes para melhorar sua experiência de navegação e analisar o tráfego do site. Ao continuar navegando, você concorda com nossa <a href="#" class="cookie-consent__link">Política de Privacidade</a>.</p>
-      </div>
-      <div class="cookie-consent__actions">
-        <button id="cookie-accept" class="btn btn--cta cookie-consent__btn">Aceitar</button>
-        <button id="cookie-reject" class="cookie-consent__btn cookie-consent__btn--outline">Rejeitar</button>
-      </div>
-    </div>
-  </div>
-
-  <script type="module" src="/src/main.ts"></script>
+<script type="module" src="/src/main.ts"></script>
 </body>
 </html>

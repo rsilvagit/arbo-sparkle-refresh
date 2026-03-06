@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(for f in servicos/*/index.html)",
+      "Bash(do sed -i 's|  <!-- CTA -->|  <!-- TESTIMONIALS -->\\\\n  <section id=\"\"depoimentos\"\" class=\"\"testimonials\"\">\\\\n    <div class=\"\"container\"\">\\\\n      <div class=\"\"testimonials__header anim-target\"\" data-anim=\"\"fade-up\"\">\\\\n        <span class=\"\"section-label\"\">Depoimentos</span>\\\\n        <h2 class=\"\"testimonials__heading\"\">O que nossos <span class=\"\"text-primary\"\">clientes</span> dizem</h2>\\\\n      </div>\\\\n      <div class=\"\"testimonials__grid\"\" id=\"\"testimonials-grid\"\">\\\\n        <!-- Populated dynamically by testimonials.ts -->\\\\n      </div>\\\\n    </div>\\\\n  </section>\\\\n\\\\n  <!-- CTA -->|' \"$f\")",
+      "Bash(done)"
+    ]
+  }
+}
