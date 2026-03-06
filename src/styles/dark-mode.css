@@ -33,9 +33,27 @@
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
-/* Dark hero overlay adjustment */
+/* Dark hero: keep light text over image overlay */
 .dark .hero {
-  --hero-overlay: linear-gradient(135deg, hsla(150, 20%, 4%, 0.9) 0%, hsla(150, 20%, 10%, 0.7) 100%);
+  --hero-overlay: linear-gradient(135deg, hsla(150, 20%, 4%, 0.85) 0%, hsla(150, 20%, 10%, 0.65) 100%);
+}
+
+.dark .hero__title-main {
+  color: hsl(40, 20%, 95%);
+}
+
+.dark .hero__title-sub {
+  color: hsl(90, 50%, 50%);
+}
+
+.dark .hero__subtitle {
+  color: hsl(40, 20%, 90% / 0.85);
+}
+
+.dark .hero__pill {
+  background-color: hsl(40, 20%, 95% / 0.1);
+  border-color: hsl(40, 20%, 95% / 0.25);
+  color: hsl(40, 20%, 95% / 0.9);
 }
 
 /* Dark mode image adjustments */
@@ -45,4 +63,17 @@
 
 .dark .navbar__logo {
   filter: brightness(1) drop-shadow(0 4px 3px rgba(0,0,0,0.3));
+}
+
+/* Dark navbar: keep light text before scroll */
+.dark .navbar:not(.navbar--scrolled) .navbar__title,
+.dark .navbar:not(.navbar--scrolled) .navbar__link,
+.dark .navbar:not(.navbar--scrolled) .navbar__hamburger,
+.dark .navbar:not(.navbar--scrolled) .theme-toggle {
+  color: hsl(40, 20%, 95%);
+}
+
+/* Dark scrolled navbar */
+.dark .navbar--scrolled .theme-toggle {
+  color: hsl(var(--foreground));
 }
