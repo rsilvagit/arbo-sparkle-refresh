@@ -1,4 +1,6 @@
-const BASE = '/arbo-sparkle-refresh/';
+import { WHATSAPP_NUMBER, WHATSAPP_DISPLAY, BASE_PATH } from './config';
+
+const BASE = BASE_PATH;
 
 function isHomePage(): boolean {
   const path = window.location.pathname;
@@ -32,7 +34,10 @@ export function renderNavbar(): string {
         ${navLink('#quem-somos', 'Quem Somos')}
         ${navLink('#servicos', 'Serviços')}
         ${navLink('#contato', 'Contato')}
-        <a href="https://wa.me/5551984843008" target="_blank" rel="noopener noreferrer" class="navbar__cta">(51) 98484-3008</a>
+        <a href="https://wa.me/${WHATSAPP_NUMBER}" target="_blank" rel="noopener noreferrer" class="navbar__cta">${WHATSAPP_DISPLAY}</a>
+        <button class="theme-toggle" aria-label="Alternar tema">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
       </nav>
       <button class="navbar__hamburger" id="hamburger-btn" aria-label="Menu" aria-expanded="false">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
@@ -43,7 +48,10 @@ export function renderNavbar(): string {
       ${mobileNavLink('#quem-somos', 'Quem Somos')}
       ${mobileNavLink('#servicos', 'Serviços')}
       ${mobileNavLink('#contato', 'Contato')}
-      <a href="https://wa.me/5551984843008" target="_blank" rel="noopener noreferrer" class="navbar__mobile-phone">(51) 98484-3008</a>
+      <a href="https://wa.me/${WHATSAPP_NUMBER}" target="_blank" rel="noopener noreferrer" class="navbar__mobile-phone">${WHATSAPP_DISPLAY}</a>
+      <button class="theme-toggle theme-toggle--mobile" aria-label="Alternar tema">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+      </button>
     </div>
   </header>`;
 }
@@ -76,7 +84,7 @@ export function renderFooter(): string {
             <a href="${prefix}#quem-somos" class="footer__nav-link">Quem Somos</a>
             <a href="${prefix}#servicos" class="footer__nav-link">Serviços</a>
             <a href="${prefix}#contato" class="footer__nav-link">Contato</a>
-            <a href="https://wa.me/5551984843008" target="_blank" rel="noopener noreferrer" class="footer__nav-link">WhatsApp</a>
+            <a href="https://wa.me/${WHATSAPP_NUMBER}" target="_blank" rel="noopener noreferrer" class="footer__nav-link">WhatsApp</a>
           </nav>
         </div>
       </div>
