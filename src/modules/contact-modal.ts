@@ -1,20 +1,33 @@
 import { showToast } from './toast';
+import { WHATSAPP_NUMBER } from './config';
 
 export function initContactModal(): void {
   const dialog = document.getElementById('contact-dialog') as HTMLDialogElement;
   const form = document.getElementById('contact-form') as HTMLFormElement;
   const closeBtn = document.getElementById('dialog-close-btn')!;
 
-  // All buttons that open the modal
+  const openDialog = () => {
+    dialog.showModal();
+    document.body.classList.add('menu-open');
+  };
+
+  const closeDialog = () => {
+    dialog.close();
+    document.body.classList.remove('menu-open');
+  };
+
   document.querySelectorAll('[data-open-modal="contact"]').forEach(btn => {
-    btn.addEventListener('click', () => dialog.showModal());
+    btn.addEventListener('click', openDialog);
   });
 
-  closeBtn.addEventListener('click', () => dialog.close());
+  closeBtn.addEventListener('click', closeDialog);
 
-  // Close on backdrop click
   dialog.addEventListener('click', (e) => {
-    if (e.target === dialog) dialog.close();
+    if (e.target === dialog) closeDialog();
+  });
+
+  dialog.addEventListener('close', () => {
+    document.body.classList.remove('menu-open');
   });
 
   form.addEventListener('submit', (e) => {
@@ -52,9 +65,9 @@ export function initContactModal(): void {
       .filter(Boolean)
       .join('\n');
 
-    window.open(`https://wa.me/5551984843008?text=${encodeURIComponent(message)}`, '_blank');
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
 
     form.reset();
-    dialog.close();
+    closeDialog();
   });
 }
