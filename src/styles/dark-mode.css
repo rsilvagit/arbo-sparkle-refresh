@@ -46,14 +46,23 @@
   color: hsl(90, 50%, 50%);
 }
 
-.dark .hero__subtitle {
-  color: hsl(40, 20%, 90% / 0.85);
+.dark .hero .hero__subtitle {
+  color: hsl(40 20% 92% / 0.9);
 }
 
-.dark .hero__pill {
-  background-color: hsl(40, 20%, 95% / 0.1);
-  border-color: hsl(40, 20%, 95% / 0.25);
-  color: hsl(40, 20%, 95% / 0.9);
+.dark .hero .hero__pill {
+  background-color: hsl(40 20% 95% / 0.12);
+  border-color: hsl(40 20% 95% / 0.3);
+  color: hsl(40 20% 95% / 0.95);
+}
+
+.dark .hero .btn--outline-light {
+  color: hsl(40 20% 95%);
+  border-color: hsl(40 20% 95% / 0.35);
+}
+
+.dark .hero .btn--outline-light:hover {
+  background-color: hsl(40 20% 95% / 0.1);
 }
 
 /* Dark mode image adjustments */
