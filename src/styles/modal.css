@@ -124,3 +124,20 @@
 .form-select {
   appearance: auto;
 }
+
+.form-error {
+  padding: 0.625rem 0.75rem;
+  border-radius: calc(var(--radius) - 2px);
+  background-color: hsl(0, 72%, 95%);
+  border: 1px solid hsl(0, 72%, 70%);
+  color: hsl(0, 72%, 35%);
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+.dark .form-error {
+  background-color: hsl(0, 50%, 18%);
+  border-color: hsl(0, 60%, 40%);
+  color: hsl(0, 80%, 80%);
+}

@@ -65,6 +65,38 @@
   background-color: hsl(40 20% 95% / 0.1);
 }
 
+/* Dark service-hero: same legibility as home hero */
+.dark .service-hero {
+  --hero-overlay: linear-gradient(135deg, hsla(150, 20%, 4%, 0.85) 0%, hsla(150, 20%, 10%, 0.65) 100%);
+}
+
+.dark .service-hero__title {
+  color: hsl(40, 20%, 95%);
+}
+
+.dark .service-hero__subtitle {
+  color: hsl(40 20% 92% / 0.9);
+}
+
+.dark .service-hero__icon {
+  color: hsl(90, 50%, 50%);
+}
+
+.dark .breadcrumb {
+  color: hsl(40 20% 95% / 0.6);
+}
+
+.dark .breadcrumb a {
+  color: hsl(40 20% 95% / 0.7);
+}
+
+/* Dark toast: brighter destructive for better visibility */
+.dark .toast--destructive {
+  background-color: hsl(0, 72%, 45%);
+  border-color: hsl(0, 72%, 50%);
+  color: hsl(0, 0%, 100%);
+}
+
 /* Dark mode image adjustments */
 .dark img {
   filter: brightness(0.9);

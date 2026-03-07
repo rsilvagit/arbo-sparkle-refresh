@@ -1,4 +1,3 @@
-import { showToast } from './toast';
 import { WHATSAPP_NUMBER } from './config';
 
 export function initContactModal(): void {
@@ -40,14 +39,13 @@ export function initContactModal(): void {
     const serviceType = (formData.get('serviceType') as string || '').trim();
     const description = (formData.get('description') as string || '').trim();
 
+    const errorEl = document.getElementById('form-error')!;
     if (!name || !phone || !serviceType) {
-      showToast({
-        title: 'Campos obrigatórios',
-        description: 'Preencha pelo menos nome, telefone e tipo de manejo.',
-        variant: 'destructive',
-      });
+      errorEl.textContent = 'Preencha pelo menos nome, telefone e tipo de manejo.';
+      errorEl.hidden = false;
       return;
     }
+    errorEl.hidden = true;
 
     const message = [
       `*Solicitação de Orçamento*`,
