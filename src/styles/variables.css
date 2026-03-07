@@ -44,4 +44,6 @@
   --border: 150 15% 18%;
   --input: 150 15% 18%;
   --ring: 90 50% 45%;
+
+  --section-gradient: linear-gradient(180deg, hsl(150, 20%, 8%) 0%, hsl(150, 15%, 10%) 100%);
 }

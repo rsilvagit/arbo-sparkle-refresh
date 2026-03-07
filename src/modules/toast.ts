@@ -6,7 +6,12 @@ interface ToastOptions {
 }
 
 export function showToast(options: ToastOptions): void {
-  const container = document.getElementById('toast-container')!;
+  // Use dialog-scoped container if a dialog is open, so toast appears above the dialog
+  const openDialog = document.querySelector('dialog[open]');
+  let container = openDialog?.querySelector('.toast-container') as HTMLElement | null;
+  if (!container) {
+    container = document.getElementById('toast-container')!;
+  }
   const toast = document.createElement('div');
   toast.className = `toast toast--${options.variant || 'default'}`;
 

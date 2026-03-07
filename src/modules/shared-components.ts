@@ -1,6 +1,7 @@
 import { WHATSAPP_NUMBER, WHATSAPP_DISPLAY, BASE_PATH } from './config';
 
 const BASE = BASE_PATH;
+const LOGO = `${BASE_PATH}images/logo.png`;
 
 function isHomePage(): boolean {
   const path = window.location.pathname;
@@ -26,7 +27,7 @@ export function renderNavbar(): string {
   <header id="navbar" class="navbar">
     <div class="container navbar__inner">
       <a href="${home}" class="navbar__brand">
-        <img src="/images/logo.png" alt="Arbo Soluções" class="navbar__logo" />
+        <img src="${LOGO}" alt="Arbo Soluções" class="navbar__logo" />
         <span class="navbar__title">Arbo Soluções</span>
       </a>
       <nav class="navbar__links">
@@ -64,7 +65,7 @@ export function renderFooter(): string {
       <div class="footer__grid">
         <div>
           <div class="footer__brand">
-            <img src="/images/logo.png" alt="Arbo Soluções" class="footer__logo" loading="lazy" width="40" height="40" />
+            <img src="${LOGO}" alt="Arbo Soluções" class="footer__logo" loading="lazy" width="40" height="40" />
             <span class="footer__brand-name">Arbo Soluções</span>
           </div>
           <p class="footer__tagline">Soluções ambientais com segurança, responsabilidade e respeito às normas desde 2014.</p>
@@ -143,6 +144,7 @@ export function renderContactModal(): string {
           <label for="description" class="form-label">Descrição</label>
           <textarea id="description" name="description" rows="4" maxlength="1000" placeholder="Descreva sua necessidade..." class="form-textarea"></textarea>
         </div>
+        <div id="form-error" class="form-error" role="alert" hidden></div>
         <button type="submit" class="btn btn--submit">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg>
           Enviar pelo WhatsApp
