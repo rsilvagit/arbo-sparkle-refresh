@@ -100,6 +100,34 @@
   transform: scale(1.05);
 }
 
+.navbar__mobile-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .navbar__mobile-actions {
+    display: none;
+  }
+}
+
+.navbar__mobile-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.5rem;
+  background: var(--cta-gradient);
+  color: hsl(var(--accent-foreground));
+  transition: transform 0.15s ease;
+}
+
+.navbar__mobile-cta:hover {
+  transform: scale(1.1);
+}
+
 .navbar__hamburger {
   display: block;
   padding: 0.25rem;
@@ -109,12 +137,6 @@
 
 .navbar--scrolled .navbar__hamburger {
   color: hsl(var(--foreground));
-}
-
-@media (min-width: 768px) {
-  .navbar__hamburger {
-    display: none;
-  }
 }
 
 .navbar__mobile-menu {
