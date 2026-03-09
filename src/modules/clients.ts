@@ -69,7 +69,9 @@ export async function initClients(): Promise<void> {
     const base = import.meta.env.BASE_URL;
     const res = await fetch(`${base}data/clients.json`);
     const all: Client[] = await res.json();
-    const selected = shuffle(all).slice(0, DISPLAY_COUNT);
+    const withLogo = shuffle(all.filter(c => c.logo));
+    const withoutLogo = shuffle(all.filter(c => !c.logo));
+    const selected = [...withLogo, ...withoutLogo].slice(0, DISPLAY_COUNT);
     cacheSelection(selected);
     renderCards(grid, selected);
   } catch {
