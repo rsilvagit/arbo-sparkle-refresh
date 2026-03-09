@@ -111,23 +111,69 @@ export function renderContactModal(): string {
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
         </button>
       </div>
+      <!-- Abas PF / PJ -->
+      <div class="form-tabs" role="tablist">
+        <button type="button" class="form-tab form-tab--active" role="tab" data-tab="pf" aria-selected="true">Pessoa Física</button>
+        <button type="button" class="form-tab" role="tab" data-tab="pj" aria-selected="false">Pessoa Jurídica</button>
+      </div>
       <form id="contact-form" class="contact-form" novalidate>
-        <div class="form-group">
-          <label for="name" class="form-label">Nome *</label>
-          <input type="text" id="name" name="name" placeholder="Seu nome completo" maxlength="100" class="form-input" />
+        <input type="hidden" id="personType" name="personType" value="pf" />
+        <!-- Campo CNPJ (PJ only) -->
+        <div id="pj-fields" class="form-pj-section" hidden>
+          <div class="form-group">
+            <label for="cnpj" class="form-label">CNPJ *</label>
+            <div class="form-input-with-status">
+              <input type="text" id="cnpj" name="cnpj" placeholder="XX.XXX.XXX/XXXX-XX" maxlength="18" class="form-input" />
+              <span id="cnpj-status" class="form-input-status"></span>
+            </div>
+          </div>
         </div>
         <div class="form-group">
-          <label for="address" class="form-label">Endereço</label>
-          <input type="text" id="address" name="address" placeholder="Rua, número, bairro" maxlength="200" class="form-input" />
+          <label for="name" id="name-label" class="form-label">Nome *</label>
+          <input type="text" id="name" name="name" placeholder="Seu nome completo" maxlength="100" class="form-input" />
         </div>
         <div class="form-row">
           <div class="form-group">
             <label for="phone" class="form-label">Telefone *</label>
-            <input type="tel" id="phone" name="phone" placeholder="(51) 99999-9999" maxlength="20" class="form-input" />
+            <input type="tel" id="phone" name="phone" placeholder="(DDD) 99999-9999" maxlength="20" class="form-input" />
           </div>
           <div class="form-group">
-            <label for="email" class="form-label">E-mail</label>
+            <label for="email" class="form-label">E-mail *</label>
             <input type="email" id="email" name="email" placeholder="seu@email.com" maxlength="255" class="form-input" />
+          </div>
+        </div>
+        <!-- Endereço estruturado -->
+        <div class="form-row form-row--cep">
+          <div class="form-group form-group--cep">
+            <label for="cep" class="form-label">CEP</label>
+            <div class="form-input-with-status">
+              <input type="text" id="cep" name="cep" placeholder="XXXXX-XXX" maxlength="9" class="form-input" />
+              <span id="cep-status" class="form-input-status"></span>
+            </div>
+          </div>
+          <div class="form-group form-group--logradouro">
+            <label for="logradouro" class="form-label">Logradouro</label>
+            <input type="text" id="logradouro" name="logradouro" placeholder="Rua / Avenida" maxlength="200" class="form-input" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="numero" class="form-label">Número</label>
+            <input type="text" id="numero" name="numero" placeholder="Nº" maxlength="10" class="form-input" />
+          </div>
+          <div class="form-group">
+            <label for="bairro" class="form-label">Bairro</label>
+            <input type="text" id="bairro" name="bairro" placeholder="Bairro" maxlength="100" class="form-input" />
+          </div>
+        </div>
+        <div class="form-row form-row--cidade">
+          <div class="form-group form-group--cidade">
+            <label for="cidade" class="form-label">Cidade</label>
+            <input type="text" id="cidade" name="cidade" placeholder="Cidade" maxlength="100" class="form-input" />
+          </div>
+          <div class="form-group form-group--uf">
+            <label for="uf" class="form-label">UF</label>
+            <input type="text" id="uf" name="uf" placeholder="RS" maxlength="2" class="form-input" />
           </div>
         </div>
         <div class="form-group">
@@ -147,7 +193,7 @@ export function renderContactModal(): string {
         </div>
         <div class="form-group">
           <label for="description" class="form-label">Descrição</label>
-          <textarea id="description" name="description" rows="4" maxlength="1000" placeholder="Descreva sua necessidade..." class="form-textarea"></textarea>
+          <textarea id="description" name="description" rows="3" maxlength="1000" placeholder="Descreva sua necessidade..." class="form-textarea"></textarea>
         </div>
         <div id="form-error" class="form-error" role="alert" hidden></div>
         <button type="submit" class="btn btn--submit">
@@ -220,3 +266,4 @@ export function injectSharedComponents(): void {
     body.insertAdjacentHTML('beforeend', renderCookieConsent());
   }
 }
+ 

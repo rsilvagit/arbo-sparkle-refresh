@@ -139,7 +139,7 @@
           <a href="#" class="navbar__link">Home</a>
           <a href="#quem-somos" class="navbar__link">Quem Somos</a>
           <a href="#servicos" class="navbar__link">Serviços</a>
-          <a href="#contato" class="navbar__link">Contato</a>
+          <a href="#contato" class="navbar__link" data-open-modal="contact">Contato</a>
           <a href="https://wa.me/5551984843008" target="_blank" rel="noopener noreferrer" class="navbar__cta">(51) 98484-3008</a>
           <button class="theme-toggle" aria-label="Alternar tema">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
@@ -183,7 +183,8 @@
           <div class="hero__pills">
             <a href="/arbo-sparkle-refresh/servicos/consultoria-ambiental/" class="hero__pill">Consultoria Ambiental</a>
             <a href="/arbo-sparkle-refresh/servicos/laudos-tecnicos/" class="hero__pill">Laudos Técnicos</a>
-            <a href="/arbo-sparkle-refresh/servicos/poda-remocao/" class="hero__pill">Poda e Remoção de Árvores</a>
+            <a href="/arbo-sparkle-refresh/servicos/poda/" class="hero__pill">Poda de Árvores</a>
+            <a href="/arbo-sparkle-refresh/servicos/remocao/" class="hero__pill">Supressão (Corte)</a>
             <a href="/arbo-sparkle-refresh/servicos/analise-risco/" class="hero__pill">Análise de Risco Arbóreo</a>
             <a href="/arbo-sparkle-refresh/servicos/licenciamento-ambiental/" class="hero__pill">Licenciamento Ambiental</a>
             <a href="/arbo-sparkle-refresh/servicos/plantios-compensatorios/" class="hero__pill">Plantios Compensatórios</a>
@@ -249,69 +250,64 @@
         </div>
 
         <div class="services__grid">
-          <div class="services__card anim-target" data-anim="fade-up" data-anim-delay="0">
+          <a href="/arbo-sparkle-refresh/servicos/laudos-tecnicos/" class="services__card services__card--link anim-target" data-anim="fade-up" data-anim-delay="0">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
-            <h3 class="services__card-title">Autorizações / Laudos Técnicos</h3>
+            <h3 class="services__card-title">Laudos Técnicos</h3>
             <p class="services__card-desc">Laudos para corte e/ou poda de árvores</p>
-          </div>
+          </a>
 
-          <div class="services__card anim-target" data-anim="fade-up" data-anim-delay="0">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+          <a href="/arbo-sparkle-refresh/servicos/cobertura-vegetal/" class="services__card services__card--link anim-target" data-anim="fade-up" data-anim-delay="0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.9C15.5 4.9 17 3.5 17 3.5s1.5 2.5-.8 6.5"/><path d="M20.1 17.8c.6-1.5.9-3.2.9-5a10 10 0 0 0-.9-4.2"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
             <h3 class="services__card-title">Laudo de Cobertura Vegetal</h3>
             <p class="services__card-desc">Laudo técnico para avaliação da cobertura vegetal</p>
-          </div>
+          </a>
 
-          <div class="services__card anim-target" data-anim="fade-up" data-anim-delay="0">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
-            <h3 class="services__card-title">Biólogo  ART</h3>
-            <p class="services__card-desc">Laudo técnico para avaliação da cobertura vegetal</p>
-          </div>
+          <a href="/arbo-sparkle-refresh/servicos/biologo/" class="services__card services__card--link anim-target" data-anim="fade-up" data-anim-delay="0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <h3 class="services__card-title">Biólogo</h3>
+            <p class="services__card-desc">Responsabilidade técnica em estudos ambientais, laudos e pareceres com ART</p>
+          </a>
 
-          <div class="services__card anim-target" data-anim="fade-up" data-anim-delay="50">
+          <a href="/arbo-sparkle-refresh/servicos/poda-remocao/" class="services__card services__card--link anim-target" data-anim="fade-up" data-anim-delay="50">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><path d="M8.12 8.12 12 12"/><path d="M20 4 8.12 15.88"/><circle cx="6" cy="18" r="3"/><path d="M14.8 14.8 20 20"/></svg>
-            <h3 class="services__card-title">Poda e Remoção</h3>
-            <p class="services__card-desc">Serviços seguros de poda e remoção de árvores</p>
-          </div>
-          <div class="services__card anim-target" data-anim="fade-up" data-anim-delay="100">
+            <h3 class="services__card-title">Poda</h3>
+            <p class="services__card-desc">Serviços seguros de poda para compatibilizar arborização e equipamentos urbanos.</p>
+          </a>
+          <a href="/arbo-sparkle-refresh/servicos/corte-arvores/" class="services__card services__card--link anim-target" data-anim="fade-up" data-anim-delay="50">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m14 12-8.5 8.5a2.12 2.12 0 1 1-3-3L11 9"/><path d="M15 13 9 7l4-4 6 6h3a8 8 0 0 1-7 7z"/></svg>
+            <h3 class="services__card-title">Remoção</h3>
+            <p class="services__card-desc">Serviços seguros supressão (corte) eliminando riscos a pessoas e ao patrimônio</p>
+          </a>
+          <a href="/arbo-sparkle-refresh/servicos/analise-risco/" class="services__card services__card--link anim-target" data-anim="fade-up" data-anim-delay="100">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
             <h3 class="services__card-title">Análise de Risco</h3>
             <p class="services__card-desc">Avaliação fitossanitária e análise de risco arbóreo</p>
-          </div>
-          <div class="services__card anim-target" data-anim="fade-up" data-anim-delay="150">
+          </a>
+          <a href="/arbo-sparkle-refresh/servicos/plantios-compensatorios/" class="services__card services__card--link anim-target" data-anim="fade-up" data-anim-delay="150">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg>
             <h3 class="services__card-title">Plantios Compensatórios</h3>
             <p class="services__card-desc">Monitoramento e execução de plantios</p>
-          </div>
-          <div class="services__card anim-target" data-anim="fade-up" data-anim-delay="200">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-            <h3 class="services__card-title">Cobertura Vegetal</h3>
-            <p class="services__card-desc">Laudo de cobertura vegetal para licenciamento</p>
-          </div>
-          <div class="services__card anim-target" data-anim="fade-up" data-anim-delay="250">
+          </a>
+          <a href="/arbo-sparkle-refresh/servicos/autorizacoes/" class="services__card services__card--link anim-target" data-anim="fade-up" data-anim-delay="250">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m9 15 2 2 4-4"/></svg>
             <h3 class="services__card-title">Autorizações</h3>
-            <p class="services__card-desc">Obtenção de autorizações junto a órgãos ambientais</p>
-          </div>
-          <div class="services__card anim-target" data-anim="fade-up" data-anim-delay="300">
+            <p class="services__card-desc">Autorizações para corte e/ou poda de árvores</p>
+          </a>
+          <a href="/arbo-sparkle-refresh/servicos/consultoria-ambiental/" class="services__card services__card--link anim-target" data-anim="fade-up" data-anim-delay="300">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg>
             <h3 class="services__card-title">Consultoria Ambiental</h3>
-            <p class="services__card-desc">Consultoria e projetos de transplante vegetal</p>
-          </div>
-          <div class="services__card anim-target" data-anim="fade-up" data-anim-delay="350">
+            <p class="services__card-desc">Assessoria em processos ambientais, de vegetação e licenciamento</p>
+          </a>
+          <a href="/arbo-sparkle-refresh/servicos/licenciamento-ambiental/" class="services__card services__card--link anim-target" data-anim="fade-up" data-anim-delay="350">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg>
             <h3 class="services__card-title">Licenciamento</h3>
             <p class="services__card-desc">Licenciamento ambiental completo</p>
-          </div>
-          <div class="services__card anim-target" data-anim="fade-up" data-anim-delay="400">
+          </a>
+          <a href="/arbo-sparkle-refresh/servicos/art/" class="services__card services__card--link anim-target" data-anim="fade-up" data-anim-delay="400">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 22h14"/><path d="M19.27 13.73A2.5 2.5 0 0 0 17.5 13h-11A2.5 2.5 0 0 0 4 15.5V17a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-1.5c0-.66-.26-1.3-.73-1.77"/><path d="M14 13V8.5C14 7 15 7 15 5a3 3 0 0 0-3-3c-1.66 0-3 1-3 3s1 2 1 3.5V13"/></svg>
             <h3 class="services__card-title">ART</h3>
             <p class="services__card-desc">Anotação de Responsabilidade Técnica</p>
-          </div>
-          <div class="services__card anim-target" data-anim="fade-up" data-anim-delay="450">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 12H3"/><path d="M17 18H3"/><path d="M17 6H3"/><path d="m11 17 2 2 4-4"/></svg>
-            <h3 class="services__card-title">Responsabilidade Técnica</h3>
-            <p class="services__card-desc">Responsabilidade técnica de empresas</p>
-          </div>
+          </a>
         </div>
       </div>
     </section>
@@ -348,8 +344,7 @@
       <div class="contact-cta__content container">
         <div class="contact-cta__inner anim-target" data-anim="fade-up">
           <h2 class="contact-cta__heading">Solicite seu Orçamento Gratuito</h2>
-          <p class="contact-cta__subtitle">Agende uma visita técnica. Vistoria gratuita em Porto Alegre.*</p>
-          <p class="contact-cta__note">*Consulte demais localidades.</p>
+          <p class="contact-cta__subtitle">Atendimento ágil em Porto Alegre e região.</p>
           <div class="contact-cta__actions">
             <button class="btn btn--cta-inverse" data-open-modal="contact">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
@@ -360,9 +355,13 @@
               arbopodasejardinagem@gmail.com
             </a>
           </div>
+          <a href="https://www.instagram.com/arbosolucoes_podas/" target="_blank" rel="noopener noreferrer" class="contact-cta__instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+              @arbosolucoes_podas
+          </a>
           <div class="contact-cta__location">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-            Porto Alegre, RS
+            <span class="city-flip">Porto Alegre</span>
           </div>
         </div>
       </div>
@@ -406,61 +405,7 @@
       </div>
     </footer>
 
-    <!-- ===== CONTACT MODAL ===== -->
-    <dialog id="contact-dialog" class="contact-dialog">
-      <div class="contact-dialog__inner">
-        <div class="contact-dialog__header">
-          <h2 class="contact-dialog__title">Solicite seu Orçamento</h2>
-          <button class="contact-dialog__close" id="dialog-close-btn" aria-label="Fechar">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-          </button>
-        </div>
-        <form id="contact-form" class="contact-form" novalidate>
-          <div class="form-group">
-            <label for="name" class="form-label">Nome *</label>
-            <input type="text" id="name" name="name" placeholder="Seu nome completo" maxlength="100" class="form-input" />
-          </div>
-          <div class="form-group">
-            <label for="address" class="form-label">Endereço</label>
-            <input type="text" id="address" name="address" placeholder="Rua, número, bairro" maxlength="200" class="form-input" />
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="phone" class="form-label">Telefone *</label>
-              <input type="tel" id="phone" name="phone" placeholder="(51) 99999-9999" maxlength="20" class="form-input" />
-            </div>
-            <div class="form-group">
-              <label for="email" class="form-label">E-mail</label>
-              <input type="email" id="email" name="email" placeholder="seu@email.com" maxlength="255" class="form-input" />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="serviceType" class="form-label">Tipo de Manejo *</label>
-            <select id="serviceType" name="serviceType" class="form-select">
-              <option value="" disabled selected>Selecione o serviço</option>
-              <option value="Poda de Árvores">Poda de Árvores</option>
-              <option value="Remoção / Corte de Árvores">Remoção / Corte de Árvores</option>
-              <option value="Análise de Risco">Análise de Risco</option>
-              <option value="Laudo Técnico">Laudo Técnico</option>
-              <option value="Consultoria Ambiental">Consultoria Ambiental</option>
-              <option value="Plantio Compensatório">Plantio Compensatório</option>
-              <option value="Licenciamento Ambiental">Licenciamento Ambiental</option>
-              <option value="Monitoramento de Vegetação">Monitoramento de Vegetação</option>
-              <option value="Outro">Outro</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="description" class="form-label">Descrição</label>
-            <textarea id="description" name="description" rows="4" maxlength="1000" placeholder="Descreva sua necessidade..." class="form-textarea"></textarea>
-          </div>
-          <div id="form-error" class="form-error" role="alert" hidden></div>
-          <button type="submit" class="btn btn--submit">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg>
-            Enviar pelo WhatsApp
-          </button>
-        </form>
-      </div>
-    </dialog>
+    <!-- ===== CONTACT MODAL (injected by shared-components.ts) ===== -->
 
     <div id="toast-container" class="toast-container" aria-live="polite"></div>
 

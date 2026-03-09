@@ -1,0 +1,47 @@
+.city-flip {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  vertical-align: bottom;
+  height: 1.3em;
+  min-width: 6ch;
+}
+
+.city-flip__text {
+  display: inline-block;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  will-change: transform, opacity;
+}
+
+/* Flip out: slide up and fade */
+.city-flip__text--out {
+  animation: city-flip-out 0.4s ease-in forwards;
+}
+
+/* Flip in: slide up from below */
+.city-flip__text--in {
+  animation: city-flip-in 0.4s ease-out forwards;
+}
+
+@keyframes city-flip-out {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-110%);
+    opacity: 0;
+  }
+}
+
+@keyframes city-flip-in {
+  0% {
+    transform: translateY(110%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
