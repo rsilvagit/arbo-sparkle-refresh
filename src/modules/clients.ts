@@ -1,8 +1,6 @@
 interface Client {
   name: string;
   logo: string;
-  dark?: boolean;
-  invertDark?: boolean;
   logoDark?: string;
 }
 
@@ -40,21 +38,18 @@ function createCard(client: Client, delay: number): string {
   const base = import.meta.env.BASE_URL;
 
   if (client.logo) {
-    const darkClass = client.dark ? ' clients__card--dark' : '';
-    const invertAttr = client.invertDark ? ' data-invert-dark' : '';
-
-    // If a separate dark-mode logo exists, render both and toggle via CSS
+    // Render both light and dark logos; CSS toggles visibility
     if (client.logoDark) {
       return `
-      <div class="clients__card${darkClass} anim-target" data-anim="scale-in" data-anim-delay="${delay}">
+      <div class="clients__card anim-target" data-anim="scale-in" data-anim-delay="${delay}">
         <img src="${base}images/clients/${client.logo}" alt="${client.name}" class="clients__logo clients__logo--light" loading="lazy" />
         <img src="${base}images/clients/${client.logoDark}" alt="${client.name}" class="clients__logo clients__logo--dark" loading="lazy" />
       </div>`;
     }
 
     return `
-      <div class="clients__card${darkClass} anim-target" data-anim="scale-in" data-anim-delay="${delay}">
-        <img src="${base}images/clients/${client.logo}" alt="${client.name}" class="clients__logo"${invertAttr} loading="lazy" />
+      <div class="clients__card anim-target" data-anim="scale-in" data-anim-delay="${delay}">
+        <img src="${base}images/clients/${client.logo}" alt="${client.name}" class="clients__logo" loading="lazy" />
       </div>`;
   }
 

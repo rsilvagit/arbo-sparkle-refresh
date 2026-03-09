@@ -102,14 +102,6 @@
   filter: brightness(0.9);
 }
 
-/* Re-invert logos that were inverted for light mode */
-.dark .clients__logo[data-invert-dark] {
-  filter: invert(1) grayscale(20%);
-}
-
-.dark .clients__card:hover .clients__logo[data-invert-dark] {
-  filter: invert(1) grayscale(0%);
-}
 
 .dark .navbar__logo {
   filter: brightness(1) drop-shadow(0 4px 3px rgba(0,0,0,0.3));

@@ -78,27 +78,6 @@
   filter: grayscale(0%);
 }
 
-.clients__card--dark {
-  background-color: hsl(220 20% 18%);
-  border-color: hsl(220 20% 25%);
-}
-
-.clients__card--dark .clients__card-name {
-  color: hsl(0 0% 90%);
-}
-
-.clients__card--dark:hover {
-  border-color: hsl(var(--primary) / 0.5);
-}
-
-.clients__card--dark .clients__logo {
-  filter: grayscale(20%) brightness(1.05);
-}
-
-.clients__card--dark:hover .clients__logo {
-  filter: grayscale(0%) brightness(1.1);
-}
-
 /* Light/dark logo variants — toggle visibility */
 .clients__logo--dark {
   display: none;
