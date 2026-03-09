@@ -27,7 +27,7 @@ export function renderNavbar(): string {
   <header id="navbar" class="navbar">
     <div class="container navbar__inner">
       <a href="${home}" class="navbar__brand">
-        <img src="${LOGO}" alt="Arbo Soluções" class="navbar__logo" />
+        <img src="${LOGO}" alt="Arbo Soluções" class="navbar__logo" width="64" height="64" />
         <span class="navbar__title">Arbo Soluções</span>
       </a>
       <nav class="navbar__links">
@@ -76,7 +76,7 @@ export function renderFooter(): string {
           <p class="footer__tagline">Soluções ambientais com segurança, responsabilidade e respeito às normas desde 2014.</p>
         </div>
         <div>
-          <h4 class="footer__col-title">Responsável Técnica</h4>
+          <p class="footer__col-title">Responsável Técnica</p>
           <div class="footer__info">
             <p>Biól. Andrea Saldanha Weber - UFRGS</p>
             <p>Esp. Arborização Urbana - UNIFESP</p>
@@ -85,7 +85,7 @@ export function renderFooter(): string {
           </div>
         </div>
         <div>
-          <h4 class="footer__col-title">Navegação</h4>
+          <p class="footer__col-title">Navegação</p>
           <nav class="footer__nav">
             <a href="${prefix}#quem-somos" class="footer__nav-link">Quem Somos</a>
             <a href="${prefix}#servicos" class="footer__nav-link">Serviços</a>
@@ -178,6 +178,11 @@ export function renderCookieConsent(): string {
 export function injectSharedComponents(): void {
   const body = document.body;
 
+  // Skip navigation link
+  if (!document.querySelector('.skip-link')) {
+    body.insertAdjacentHTML('afterbegin', '<a href="#main-content" class="skip-link">Pular para o conteúdo</a>');
+  }
+
   // Only inject if placeholders or no existing elements
   if (!document.getElementById('navbar')) {
     body.insertAdjacentHTML('afterbegin', renderNavbar());
@@ -185,6 +190,26 @@ export function injectSharedComponents(): void {
 
   if (!document.getElementById('footer-year')) {
     body.insertAdjacentHTML('beforeend', renderFooter());
+  }
+
+  // Wrap content in <main> if not present (must run after footer injection)
+  if (!document.getElementById('main-content')) {
+    const navbar = document.getElementById('navbar');
+    const footer = document.querySelector('.footer');
+    if (navbar && footer) {
+      const main = document.createElement('main');
+      main.id = 'main-content';
+      let sibling = navbar.nextElementSibling;
+      const toWrap: Element[] = [];
+      while (sibling && sibling !== footer) {
+        toWrap.push(sibling);
+        sibling = sibling.nextElementSibling;
+      }
+      if (toWrap.length > 0) {
+        navbar.after(main);
+        toWrap.forEach(el => main.appendChild(el));
+      }
+    }
   }
 
   if (!document.getElementById('contact-dialog')) {
