@@ -141,3 +141,121 @@
   border-color: hsl(0, 60%, 40%);
   color: hsl(0, 80%, 80%);
 }
+
+/* ── Tabs PF/PJ (estilo aba de planilha) ── */
+
+.form-tabs {
+  display: flex;
+  margin: 0 -1.5rem;
+  margin-top: -0.5rem;
+  border-bottom: 1px solid hsl(var(--input));
+}
+
+.form-tab {
+  flex: 1;
+  padding: 0.625rem 1rem;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: hsl(var(--muted));
+  color: hsl(var(--muted-foreground));
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.form-tab:first-child {
+  border-top-left-radius: calc(var(--radius) - 1px);
+}
+
+.form-tab:last-child {
+  border-top-right-radius: calc(var(--radius) - 1px);
+}
+
+.form-tab--active {
+  background: hsl(var(--background));
+  color: hsl(var(--primary));
+  border-bottom-color: hsl(var(--primary));
+  font-weight: 600;
+}
+
+.form-tab:hover:not(.form-tab--active) {
+  background: hsl(var(--muted) / 0.7);
+  color: hsl(var(--foreground));
+}
+
+/* ── PJ section ── */
+
+.form-pj-section[hidden] {
+  display: none;
+}
+
+/* ── Input with status indicator ── */
+
+.form-input-with-status {
+  position: relative;
+}
+
+.form-input-with-status .form-input {
+  padding-right: 2.5rem;
+}
+
+.form-input-status {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.875rem;
+  pointer-events: none;
+  line-height: 1;
+}
+
+.form-input-status--loading::after {
+  content: '';
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid hsl(var(--muted-foreground));
+  border-top-color: hsl(var(--primary));
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.form-input-status--success {
+  color: hsl(var(--primary));
+}
+
+.form-input-status--error {
+  color: hsl(0, 72%, 50%);
+}
+
+/* ── Address grid overrides ── */
+
+@media (min-width: 640px) {
+  .form-row--cep {
+    grid-template-columns: 35% 1fr;
+  }
+
+  .form-row--cidade {
+    grid-template-columns: 1fr 25%;
+  }
+}
+
+/* ── Screen reader only ── */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
