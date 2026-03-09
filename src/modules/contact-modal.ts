@@ -233,9 +233,15 @@ export function initContactModal(): void {
     const addressParts = [logradouro, numero, bairro, cidade, uf, cep].filter(Boolean);
     const addressStr = addressParts.join(', ');
 
+    // Generate quote ID: last 4 digits of phone (or email hash) / year
+    const contactDigits = extractDigits(phone || email);
+    const last4 = contactDigits.slice(-4).padStart(4, '0');
+    const quoteId = `${last4}/${new Date().getFullYear()}`;
+
     // Build WhatsApp message
     const lines: string[] = [
       '*Solicitação de Orçamento*',
+      `*ID:* ${quoteId}`,
       '',
       `*Tipo:* ${personType === 'pj' ? 'Pessoa Jurídica' : 'Pessoa Física'}`,
     ];
