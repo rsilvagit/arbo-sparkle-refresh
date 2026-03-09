@@ -99,6 +99,19 @@
   filter: grayscale(0%) brightness(1.1);
 }
 
+/* Light/dark logo variants — toggle visibility */
+.clients__logo--dark {
+  display: none;
+}
+
+.dark .clients__logo--light {
+  display: none;
+}
+
+.dark .clients__logo--dark {
+  display: block;
+}
+
 .clients__card-name {
   font-family: var(--font-sans);
   font-size: 0.8125rem;
