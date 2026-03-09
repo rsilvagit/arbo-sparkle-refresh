@@ -80,3 +80,14 @@
   font-size: 0.875rem;
   line-height: 1.625;
 }
+
+/* Clickable service cards (link to landing pages) */
+.services__card--link {
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.services__card--link:hover {
+  transform: translateY(-2px);
+}
