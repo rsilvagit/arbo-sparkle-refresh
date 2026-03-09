@@ -6,13 +6,15 @@ import { initContactModal } from './modules/contact-modal';
 import { initFooter } from './modules/footer';
 import { initCookieConsent } from './modules/cookie-consent';
 import { initTestimonials } from './modules/testimonials';
+import { initClients } from './modules/clients';
 import { initDarkMode } from './modules/dark-mode';
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
   injectSharedComponents();
   initDarkMode();
   initNavbar();
-  initTestimonials();
+  await initTestimonials();
+  await initClients();
   initScrollAnimator();
   initContactModal();
   initFooter();
