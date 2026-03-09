@@ -135,7 +135,7 @@ export function renderContactModal(): string {
         <div class="form-row">
           <div class="form-group">
             <label for="phone" class="form-label">Telefone *</label>
-            <input type="tel" id="phone" name="phone" placeholder="(51) 99999-9999" maxlength="20" class="form-input" />
+            <input type="tel" id="phone" name="phone" placeholder="(DDD) 99999-9999" maxlength="20" class="form-input" />
           </div>
           <div class="form-group">
             <label for="email" class="form-label">E-mail *</label>
