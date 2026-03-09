@@ -45,8 +45,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 0.75rem;
-  padding: 1.5rem;
+  padding: 1.5rem 1rem;
+  min-height: 7rem;
   border-radius: 0.75rem;
   border: 1px solid hsl(var(--border));
   background-color: hsl(var(--card));
@@ -59,14 +61,26 @@
 }
 
 .clients__card svg {
-  width: 2rem;
-  height: 2rem;
-  color: hsl(var(--primary) / 0.6);
+  width: 1.75rem;
+  height: 1.75rem;
+  color: hsl(var(--primary) / 0.5);
+}
+
+.clients__logo {
+  max-width: 100%;
+  max-height: 3rem;
+  object-fit: contain;
+  filter: grayscale(30%);
+  transition: filter 0.3s ease;
+}
+
+.clients__card:hover .clients__logo {
+  filter: grayscale(0%);
 }
 
 .clients__card-name {
   font-family: var(--font-sans);
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 500;
   color: hsl(var(--foreground));
   text-align: center;
