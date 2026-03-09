@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import path, { resolve } from "path";
 
 export default defineConfig({
-  base: "/arbo-sparkle-refresh/",
+  base: "/",
   server: {
     host: "::",
     port: 8080,
