@@ -93,7 +93,7 @@
 
 /* ===== SERVICE DESCRIPTION ===== */
 .service-description {
-  padding: 5rem 0;
+  padding: 3rem 0;
   background-color: hsl(var(--background));
 }
 
@@ -167,13 +167,13 @@
 
 /* ===== SERVICE BENEFITS ===== */
 .service-benefits {
-  padding: 5rem 0;
+  padding: 3rem 0;
   background: var(--section-gradient);
 }
 
 .service-benefits__header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .service-benefits__heading {
@@ -249,13 +249,13 @@
 
 /* ===== SERVICE PROCESS ===== */
 .service-process {
-  padding: 5rem 0;
+  padding: 3rem 0;
   background-color: hsl(var(--background));
 }
 
 .service-process__header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .service-process__heading {
