@@ -1,11 +1,11 @@
 .clients {
-  padding: 5rem 0;
+  padding: 3rem 0;
   background-color: hsl(var(--background));
 }
 
 .clients__header {
   text-align: center;
-  margin-bottom: 3.5rem;
+  margin-bottom: 2rem;
 }
 
 .clients__heading {
@@ -78,25 +78,22 @@
   filter: grayscale(0%);
 }
 
-.clients__card--dark {
-  background-color: hsl(220 20% 18%);
-  border-color: hsl(220 20% 25%);
+/* Light/dark logo variants — toggle visibility */
+img.clients__logo--dark {
+  display: none;
 }
 
-.clients__card--dark .clients__card-name {
-  color: hsl(0 0% 90%);
+.dark img.clients__logo--light {
+  display: none;
 }
 
-.clients__card--dark:hover {
-  border-color: hsl(var(--primary) / 0.5);
+.dark img.clients__logo--dark {
+  display: block;
+  filter: grayscale(30%);
 }
 
-.clients__card--dark .clients__logo {
-  filter: grayscale(20%) brightness(1.05);
-}
-
-.clients__card--dark:hover .clients__logo {
-  filter: grayscale(0%) brightness(1.1);
+.dark .clients__card:hover .clients__logo--dark {
+  filter: grayscale(0%);
 }
 
 .clients__card-name {

@@ -102,6 +102,10 @@
   filter: brightness(0.9);
 }
 
+.dark .clients__logo {
+  filter: none;
+}
+
 
 .dark .navbar__logo {
   filter: brightness(1) drop-shadow(0 4px 3px rgba(0,0,0,0.3));

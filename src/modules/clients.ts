@@ -1,7 +1,7 @@
 interface Client {
   name: string;
   logo: string;
-  dark?: boolean;
+  logoDark?: string;
 }
 
 const CACHE_KEY = 'arbo_clients_selection';
@@ -38,10 +38,15 @@ function createCard(client: Client, delay: number): string {
   const base = import.meta.env.BASE_URL;
 
   if (client.logo) {
-    const darkClass = client.dark ? ' clients__card--dark' : '';
+    const lightImg = `<img src="${base}images/clients/${client.logo}" alt="${client.name}" class="clients__logo clients__logo--light" loading="lazy" />`;
+    const darkImg = client.logoDark
+      ? `<img src="${base}images/clients/${client.logoDark}" alt="${client.name}" class="clients__logo clients__logo--dark" loading="lazy" />`
+      : '';
+
     return `
-      <div class="clients__card${darkClass} anim-target" data-anim="scale-in" data-anim-delay="${delay}">
-        <img src="${base}images/clients/${client.logo}" alt="${client.name}" class="clients__logo" loading="lazy" />
+      <div class="clients__card anim-target" data-anim="scale-in" data-anim-delay="${delay}">
+        ${lightImg}
+        ${darkImg}
       </div>`;
   }
 
