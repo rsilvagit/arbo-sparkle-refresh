@@ -24,7 +24,7 @@
 .testimonials__grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: 1.5rem;
   max-width: 64rem;
   margin: 0 auto;
 }
@@ -74,7 +74,7 @@
   font-family: var(--font-sans);
   color: hsl(var(--muted-foreground));
   line-height: 1.625;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   font-style: italic;
 }
 
