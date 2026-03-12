@@ -24,8 +24,9 @@
   <meta property="og:image" content="%VITE_SITE_URL%/images/og-image.png" />
   <meta property="og:image:width" content="400" />
   <meta property="og:image:height" content="400" />
+  <meta property="og:image:alt" content="Arbo Soluções - Consultoria Ambiental em Porto Alegre" />
 
-  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Poda de Árvore com Responsável Técnico | Arbo Soluções" />
   <meta name="twitter:description" content="Poda técnica e segura em Porto Alegre. Atendimento profissional conforme normas ABNT e legislação ambiental." />
   <meta name="twitter:image" content="%VITE_SITE_URL%/images/og-image.png" />
@@ -74,9 +75,53 @@
     }
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "%VITE_SITE_URL%"},
+      {"@type": "ListItem", "position": 2, "name": "Serviços", "item": "%VITE_SITE_URL%/#servicos"},
+      {"@type": "ListItem", "position": 3, "name": "Poda de Árvore", "item": "%VITE_SITE_URL%/servicos/poda/"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Preciso de autorização para podar uma árvore?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Depende do município e da espécie. Em Porto Alegre, muitas podas exigem autorização da SMAMUS. A Arbo orienta e cuida do encaminhamento."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Posso podar uma árvore por conta própria?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A poda irregular pode causar danos à árvore, riscos de acidente e multas ambientais. É fundamental que seja feita por profissional habilitado."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quanto tempo leva o serviço de poda?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A avaliação técnica é feita em até 48h. O prazo de execução depende do porte da árvore e da necessidade de autorização, mas priorizamos agilidade."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
-
+<a href="#main-content" class="skip-link">Pular para o conteúdo</a>
+<main id="main-content">
 <!-- SERVICE HERO -->
   <section class="service-hero">
     <div class="service-hero__bg"></div>
@@ -240,6 +285,7 @@
     </div>
   </section>
 
+</main>
 <script type="module" src="/src/main.ts"></script>
 </body>
 </html>
