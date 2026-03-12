@@ -1,11 +1,11 @@
 .clients {
-  padding: 5rem 0;
+  padding: 3rem 0;
   background-color: hsl(var(--background));
 }
 
 .clients__header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .clients__heading {
@@ -79,15 +79,15 @@
 }
 
 /* Light/dark logo variants — toggle visibility */
-.clients__logo--dark {
+img.clients__logo--dark {
   display: none;
 }
 
-.dark .clients__logo--light {
+.dark img.clients__logo--light {
   display: none;
 }
 
-.dark .clients__logo--dark {
+.dark img.clients__logo--dark {
   display: block;
   filter: grayscale(30%);
 }

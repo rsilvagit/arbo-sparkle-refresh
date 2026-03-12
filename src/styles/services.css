@@ -1,11 +1,11 @@
 .services {
-  padding: 5rem 0;
+  padding: 3rem 0;
   background-color: hsl(var(--background));
 }
 
 .services__header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .services__heading {

@@ -56,10 +56,10 @@
 .navbar__links {
   display: none;
   align-items: center;
-  gap: 2rem;
+  gap: 1.25rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .navbar__links {
     display: flex;
   }
@@ -106,7 +106,7 @@
   gap: 0.5rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .navbar__mobile-actions {
     display: none;
   }
@@ -154,7 +154,7 @@
   display: block;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .navbar__mobile-menu {
     display: none !important;
   }
