@@ -1,40 +1,19 @@
 import { defineConfig } from "vite";
 import path, { resolve } from "path";
 import Sitemap from "vite-plugin-sitemap";
-import vitePrerender from "vite-plugin-prerender";
 
 const hostname = "https://www.arbosolucoes.com.br";
-
-const routes = [
-  "/",
-  "/servicos/consultoria-ambiental/",
-  "/servicos/laudos-tecnicos/",
-  "/servicos/poda/",
-  "/servicos/analise-risco/",
-  "/servicos/plantios-compensatorios/",
-  "/servicos/licenciamento-ambiental/",
-  "/servicos/monitoramento-vegetacao/",
-  "/servicos/corte-arvores/",
-  "/servicos/autorizacoes/",
-  "/servicos/biologo/",
-  "/servicos/art/",
-  "/servicos/cobertura-vegetal/",
-  "/servicos/rt/",
-];
 
 export default defineConfig({
   base: "/",
   plugins: [
     Sitemap({
       hostname,
-      dynamicRoutes: routes.filter((r) => r !== "/"),
+      exclude: ["/404"],
       changefreq: "monthly",
       priority: 0.8,
       lastmod: new Date(),
-    }),
-    vitePrerender({
-      staticDir: resolve(__dirname, "dist"),
-      routes,
+      readable: true,
     }),
   ],
   server: {

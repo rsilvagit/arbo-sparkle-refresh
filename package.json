@@ -13,7 +13,6 @@
     "vite": "^5.4.19"
   },
   "dependencies": {
-    "vite-plugin-prerender": "^1.0.8",
     "vite-plugin-sitemap": "^0.8.2"
   }
 }
