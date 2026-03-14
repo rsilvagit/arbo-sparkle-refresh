@@ -22,7 +22,7 @@ function mobileNavLink(hash: string, label: string, title: string, cls = 'navbar
 }
 
 export function renderNavbar(): string {
-  const home = isHomePage() ? '#' : BASE;
+  const home = isHomePage() ? '/' : BASE;
   return `
   <header id="navbar" class="navbar">
     <div class="container navbar__inner">
