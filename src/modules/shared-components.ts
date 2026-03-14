@@ -8,17 +8,17 @@ function isHomePage(): boolean {
   return path === BASE || path === `${BASE}index.html` || path === '/' || path === '/index.html';
 }
 
-function navLink(hash: string, label: string): string {
+function navLink(hash: string, label: string, title: string): string {
   const href = isHomePage() ? hash : `${BASE}${hash.replace('#', '#')}`;
   const prefix = isHomePage() ? '' : BASE;
-  if (hash.startsWith('#')) return `<a href="${prefix}${hash}" class="navbar__link">${label}</a>`;
-  return `<a href="${hash}" class="navbar__link">${label}</a>`;
+  if (hash.startsWith('#')) return `<a href="${prefix}${hash}" class="navbar__link" title="${title}">${label}</a>`;
+  return `<a href="${hash}" class="navbar__link" title="${title}">${label}</a>`;
 }
 
-function mobileNavLink(hash: string, label: string, cls = 'navbar__mobile-link'): string {
+function mobileNavLink(hash: string, label: string, title: string, cls = 'navbar__mobile-link'): string {
   const prefix = isHomePage() ? '' : BASE;
-  if (hash.startsWith('#')) return `<a href="${prefix}${hash}" class="${cls}">${label}</a>`;
-  return `<a href="${hash}" class="${cls}">${label}</a>`;
+  if (hash.startsWith('#')) return `<a href="${prefix}${hash}" class="${cls}" title="${title}">${label}</a>`;
+  return `<a href="${hash}" class="${cls}" title="${title}">${label}</a>`;
 }
 
 export function renderNavbar(): string {
@@ -26,22 +26,22 @@ export function renderNavbar(): string {
   return `
   <header id="navbar" class="navbar">
     <div class="container navbar__inner">
-      <a href="${home}" class="navbar__brand">
+      <a href="${home}" class="navbar__brand" title="Arbo Soluções - Página inicial" aria-label="Arbo Soluções - Página inicial">
         <img src="${LOGO}" alt="Arbo Soluções" class="navbar__logo" width="64" height="64" />
         <span class="navbar__title">Arbo Soluções</span>
       </a>
       <nav class="navbar__links">
-        <a href="${home}" class="navbar__link">Home</a>
-        ${navLink('#quem-somos', 'Quem Somos')}
-        ${navLink('#servicos', 'Serviços')}
-        ${navLink('#contato', 'Contato')}
-        <a href="https://wa.me/${WHATSAPP_NUMBER}" target="_blank" rel="noopener noreferrer" class="navbar__cta">${WHATSAPP_DISPLAY}</a>
+        <a href="${home}" class="navbar__link" title="Página inicial">Home</a>
+        ${navLink('#quem-somos', 'Quem Somos', 'Conheça a Arbo Soluções')}
+        ${navLink('#servicos', 'Serviços', 'Nossos serviços ambientais')}
+        ${navLink('#contato', 'Contato', 'Entre em contato')}
+        <a href="https://wa.me/${WHATSAPP_NUMBER}" target="_blank" rel="noopener noreferrer" class="navbar__cta" title="Fale conosco pelo WhatsApp" aria-label="Ligar para ${WHATSAPP_DISPLAY}">${WHATSAPP_DISPLAY}</a>
         <button class="theme-toggle" aria-label="Alternar tema">
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
         </button>
       </nav>
       <div class="navbar__mobile-actions">
-        <a href="https://wa.me/${WHATSAPP_NUMBER}" target="_blank" rel="noopener noreferrer" class="navbar__mobile-cta" aria-label="WhatsApp">
+        <a href="https://wa.me/${WHATSAPP_NUMBER}" target="_blank" rel="noopener noreferrer" class="navbar__mobile-cta" title="Fale conosco pelo WhatsApp" aria-label="Contato via WhatsApp">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         </a>
         <button class="navbar__hamburger" id="hamburger-btn" aria-label="Menu" aria-expanded="false">
@@ -50,11 +50,11 @@ export function renderNavbar(): string {
       </div>
     </div>
     <div class="navbar__mobile-menu" id="mobile-menu">
-      ${mobileNavLink(home, 'Home')}
-      ${mobileNavLink('#quem-somos', 'Quem Somos')}
-      ${mobileNavLink('#servicos', 'Serviços')}
-      ${mobileNavLink('#contato', 'Contato')}
-      <a href="https://wa.me/${WHATSAPP_NUMBER}" target="_blank" rel="noopener noreferrer" class="navbar__mobile-phone">${WHATSAPP_DISPLAY}</a>
+      ${mobileNavLink(home, 'Home', 'Página inicial')}
+      ${mobileNavLink('#quem-somos', 'Quem Somos', 'Conheça a Arbo Soluções')}
+      ${mobileNavLink('#servicos', 'Serviços', 'Nossos serviços ambientais')}
+      ${mobileNavLink('#contato', 'Contato', 'Entre em contato')}
+      <a href="https://wa.me/${WHATSAPP_NUMBER}" target="_blank" rel="noopener noreferrer" class="navbar__mobile-phone" title="Fale conosco pelo WhatsApp" aria-label="Ligar para ${WHATSAPP_DISPLAY}">${WHATSAPP_DISPLAY}</a>
       <button class="theme-toggle theme-toggle--mobile" aria-label="Alternar tema">
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
       </button>
@@ -87,10 +87,10 @@ export function renderFooter(): string {
         <div>
           <p class="footer__col-title">Navegação</p>
           <nav class="footer__nav">
-            <a href="${prefix}#quem-somos" class="footer__nav-link">Quem Somos</a>
-            <a href="${prefix}#servicos" class="footer__nav-link">Serviços</a>
-            <a href="${prefix}#contato" class="footer__nav-link">Contato</a>
-            <a href="https://wa.me/${WHATSAPP_NUMBER}" target="_blank" rel="noopener noreferrer" class="footer__nav-link">WhatsApp</a>
+            <a href="${prefix}#quem-somos" class="footer__nav-link" title="Conheça a Arbo Soluções">Quem Somos</a>
+            <a href="${prefix}#servicos" class="footer__nav-link" title="Nossos serviços ambientais">Serviços</a>
+            <a href="${prefix}#contato" class="footer__nav-link" title="Entre em contato">Contato</a>
+            <a href="https://wa.me/${WHATSAPP_NUMBER}" target="_blank" rel="noopener noreferrer" class="footer__nav-link" title="Fale conosco pelo WhatsApp" aria-label="Contato via WhatsApp">WhatsApp</a>
           </nav>
         </div>
       </div>
@@ -226,7 +226,7 @@ export function injectSharedComponents(): void {
 
   // Skip navigation link
   if (!document.querySelector('.skip-link')) {
-    body.insertAdjacentHTML('afterbegin', '<a href="#main-content" class="skip-link">Pular para o conteúdo</a>');
+    body.insertAdjacentHTML('afterbegin', '<a href="#main-content" class="skip-link" title="Pular para o conteúdo principal">Pular para o conteúdo</a>');
   }
 
   // Only inject if placeholders or no existing elements
