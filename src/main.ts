@@ -9,6 +9,7 @@ import { initTestimonials } from './modules/testimonials';
 import { initClients } from './modules/clients';
 import { initDarkMode } from './modules/dark-mode';
 import { initCityFlip } from './modules/city-flip';
+import { injectRelatedServices } from './modules/related-services';
 
 document.addEventListener('DOMContentLoaded', async () => {
   injectSharedComponents();
@@ -18,6 +19,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   await initClients();
   initScrollAnimator();
   initCityFlip();
+  injectRelatedServices();
   initContactModal();
   initFooter();
   initCookieConsent();

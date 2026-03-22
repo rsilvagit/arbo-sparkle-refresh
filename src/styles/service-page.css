@@ -324,6 +324,90 @@
   line-height: 1.625;
 }
 
+/* ===== RELATED SERVICES ===== */
+.related-services {
+  padding: 3rem 0;
+  background: var(--section-gradient);
+}
+
+.related-services__header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.related-services__heading {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+}
+
+@media (min-width: 768px) {
+  .related-services__heading {
+    font-size: 2.5rem;
+  }
+}
+
+.related-services__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .related-services__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .related-services__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.related-services__card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid hsl(var(--border));
+  background-color: hsl(var(--background));
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.related-services__card:hover {
+  border-color: hsl(var(--primary) / 0.3);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+
+.related-services__card svg {
+  flex-shrink: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+  color: hsl(var(--primary));
+}
+
+.related-services__card-title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+}
+
+.related-services__card-desc {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  color: hsl(var(--muted-foreground));
+  line-height: 1.5;
+  margin-top: 0.25rem;
+}
+
 /* ===== HERO PILLS AS LINKS ===== */
 a.hero__pill {
   transition: background-color 0.2s ease, color 0.2s ease;

@@ -1,21 +1,9 @@
 import { defineConfig } from "vite";
 import path, { resolve } from "path";
-import Sitemap from "vite-plugin-sitemap";
-
-const hostname = "https://www.arbosolucoes.com.br";
 
 export default defineConfig({
   base: "/",
-  plugins: [
-    Sitemap({
-      hostname,
-      exclude: ["/404"],
-      changefreq: "monthly",
-      priority: 0.8,
-      lastmod: new Date(),
-      readable: true,
-    }),
-  ],
+  plugins: [],
   server: {
     host: "::",
     port: 8080,
