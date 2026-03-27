@@ -37,9 +37,16 @@ export function initNavbar(): void {
   const hamburgerBtn = document.getElementById('hamburger-btn')!;
   const mobileMenu = document.getElementById('mobile-menu')!;
 
+  let ticking = false;
   window.addEventListener('scroll', () => {
-    navbar.classList.toggle('navbar--scrolled', window.scrollY > 50);
-  });
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        navbar.classList.toggle('navbar--scrolled', window.scrollY > 50);
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
 
   hamburgerBtn.addEventListener('click', () => {
     const isOpen = mobileMenu.classList.toggle('is-open');

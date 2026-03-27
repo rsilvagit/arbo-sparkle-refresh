@@ -20,28 +20,49 @@ const FLIP_DURATION = 400;
 
 function animateElement(el: HTMLElement): void {
   let index = 0;
+  let intervalId: number | undefined;
   const inner = el.querySelector('.city-flip__text') as HTMLElement | null;
   if (!inner) return;
 
-  setInterval(() => {
-    // Flip out current city
-    inner.classList.add('city-flip__text--out');
+  function startFlipping(): void {
+    if (intervalId) return;
+    intervalId = window.setInterval(() => {
+      inner!.classList.add('city-flip__text--out');
 
-    setTimeout(() => {
-      // Change text
-      index = (index + 1) % CITIES.length;
-      inner.textContent = CITIES[index];
-
-      // Remove out, add in
-      inner.classList.remove('city-flip__text--out');
-      inner.classList.add('city-flip__text--in');
-
-      // Clean up in class after animation
       setTimeout(() => {
-        inner.classList.remove('city-flip__text--in');
+        index = (index + 1) % CITIES.length;
+        inner!.textContent = CITIES[index];
+        inner!.classList.remove('city-flip__text--out');
+        inner!.classList.add('city-flip__text--in');
+
+        setTimeout(() => {
+          inner!.classList.remove('city-flip__text--in');
+        }, FLIP_DURATION);
       }, FLIP_DURATION);
-    }, FLIP_DURATION);
-  }, FLIP_INTERVAL);
+    }, FLIP_INTERVAL);
+  }
+
+  function stopFlipping(): void {
+    if (intervalId) {
+      clearInterval(intervalId);
+      intervalId = undefined;
+    }
+  }
+
+  // Only animate when visible to save CPU
+  const visObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          startFlipping();
+        } else {
+          stopFlipping();
+        }
+      });
+    },
+    { threshold: 0.1 },
+  );
+  visObserver.observe(el);
 }
 
 export function initCityFlip(): void {
@@ -55,18 +76,7 @@ export function initCityFlip(): void {
       el.innerHTML = `<span class="city-flip__text">${text}</span>`;
     }
 
-    // Start animation when element is visible
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            animateElement(el);
-            observer.unobserve(el);
-          }
-        });
-      },
-      { threshold: 0.1 },
-    );
-    observer.observe(el);
+    // animateElement now handles its own visibility observer
+    animateElement(el);
   });
 }
