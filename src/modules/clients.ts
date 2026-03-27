@@ -21,9 +21,9 @@ function createCard(client: Client, delay: number): string {
   const base = import.meta.env.BASE_URL;
 
   if (client.logo) {
-    const lightImg = `<img src="${base}images/clients/${client.logo}" alt="${client.name}" class="clients__logo clients__logo--light" loading="lazy" />`;
+    const lightImg = `<img src="${base}images/clients/${client.logo}" alt="${client.name}" class="clients__logo clients__logo--light" loading="lazy" width="160" height="48" />`;
     const darkImg = client.logoDark
-      ? `<img src="${base}images/clients/${client.logoDark}" alt="${client.name}" class="clients__logo clients__logo--dark" loading="lazy" />`
+      ? `<img src="${base}images/clients/${client.logoDark}" alt="${client.name}" class="clients__logo clients__logo--dark" loading="lazy" width="160" height="48" />`
       : '';
 
     return `

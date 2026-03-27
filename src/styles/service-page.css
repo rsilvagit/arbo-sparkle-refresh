@@ -11,9 +11,19 @@
 .service-hero__bg {
   position: absolute;
   inset: 0;
-  background-image: url('/images/hero-bg.jpg');
+  background-image: url('/images/hero-bg-480w.webp');
   background-size: cover;
   background-position: center;
+}
+
+@media (min-width: 481px) {
+  .service-hero__bg { background-image: url('/images/hero-bg-768w.webp'); }
+}
+@media (min-width: 769px) {
+  .service-hero__bg { background-image: url('/images/hero-bg-1024w.webp'); }
+}
+@media (min-width: 1025px) {
+  .service-hero__bg { background-image: url('/images/hero-bg-1920w.webp'); }
 }
 
 .service-hero__overlay {

@@ -70,12 +70,12 @@
   max-width: 100%;
   max-height: 3rem;
   object-fit: contain;
-  filter: grayscale(30%);
-  transition: filter 0.3s ease;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
 }
 
 .clients__card:hover .clients__logo {
-  filter: grayscale(0%);
+  opacity: 1;
 }
 
 /* Light/dark logo variants — toggle visibility */
@@ -89,11 +89,11 @@ img.clients__logo--dark {
 
 .dark img.clients__logo--dark {
   display: block;
-  filter: grayscale(30%);
+  opacity: 0.7;
 }
 
 .dark .clients__card:hover .clients__logo--dark {
-  filter: grayscale(0%);
+  opacity: 1;
 }
 
 .clients__card-name {

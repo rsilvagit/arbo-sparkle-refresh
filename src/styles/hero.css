@@ -10,9 +10,39 @@
 .hero__bg {
   position: absolute;
   inset: 0;
-  background-image: url('/images/hero-bg.jpg');
+  background-image: url('/images/hero-bg-480w.webp');
   background-size: cover;
   background-position: center;
+}
+
+@media (min-width: 481px) {
+  .hero__bg {
+    background-image: url('/images/hero-bg-768w.webp');
+  }
+}
+
+@media (min-width: 769px) {
+  .hero__bg {
+    background-image: url('/images/hero-bg-1024w.webp');
+  }
+}
+
+@media (min-width: 1025px) {
+  .hero__bg {
+    background-image: url('/images/hero-bg-1920w.webp');
+  }
+}
+
+/* JPEG fallback for browsers without WebP */
+@supports not (background-image: url('/images/hero-bg-480w.webp')) {
+  .hero__bg {
+    background-image: url('/images/hero-bg-768w.jpg');
+  }
+  @media (min-width: 769px) {
+    .hero__bg {
+      background-image: url('/images/hero-bg.jpg');
+    }
+  }
 }
 
 .hero__overlay {
@@ -92,12 +122,18 @@
 .hero__pill {
   padding: 0.5rem 1rem;
   border-radius: 9999px;
-  background-color: hsl(var(--primary-foreground) / 0.1);
-  backdrop-filter: blur(4px);
+  background-color: hsl(var(--primary-foreground) / 0.15);
   border: 1px solid hsl(var(--primary-foreground) / 0.2);
   color: hsl(var(--primary-foreground) / 0.9);
   font-size: 0.875rem;
   font-family: var(--font-sans);
+}
+
+@media (min-width: 1024px) {
+  .hero__pill {
+    background-color: hsl(var(--primary-foreground) / 0.1);
+    backdrop-filter: blur(4px);
+  }
 }
 
 .hero__cta-group {
