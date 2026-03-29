@@ -53,12 +53,15 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Arbo Soluções",
-      "description": "Consultoria ambiental em Porto Alegre desde 2014. Laudos técnicos, poda e remoção de árvores, licenciamento ambiental.",
-      "url": "%VITE_SITE_URL%",
-      "image": "%VITE_SITE_URL%/images/og-image.png",
-      "telephone": "+5551984843008",
+      "@type": "ProfessionalService",
+      "@id": "https://www.arbosolucoes.com/#empresa",
+      "name": "Arbo Soluções - Podas",
+      "alternateName": "Arbo Soluções",
+      "description": "Consultoria ambiental e manejo da vegetação urbana em Porto Alegre desde 2014. Poda e remoção de árvores, laudos técnicos com ART, licenciamento ambiental, análise de risco arbóreo. CRBio-03.",
+      "url": "https://www.arbosolucoes.com",
+      "logo": "https://www.arbosolucoes.com/images/logo.webp",
+      "image": "https://www.arbosolucoes.com/images/og-image.webp",
+      "telephone": "+55 51 98484-3008",
       "email": "arbopodasejardinagem@gmail.com",
       "address": {
         "@type": "PostalAddress",
@@ -68,12 +71,19 @@
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "-30.0346",
-        "longitude": "-51.2177"
+        "latitude": -30.0346,
+        "longitude": -51.2177
       },
       "foundingDate": "2014",
-      "areaServed": "Porto Alegre e região metropolitana",
+      "areaServed": {
+        "@type": "City",
+        "name": "Porto Alegre"
+      },
       "priceRange": "$$",
+      "sameAs": [
+        "https://www.google.com/maps?cid=15762683183879523958",
+        "https://www.instagram.com/arbosolucoes_podas/"
+      ],
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 5,
@@ -118,19 +128,19 @@
         "@type": "OfferCatalog",
         "name": "Serviços Ambientais",
         "itemListElement": [
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Laudos Técnicos", "url": "%VITE_SITE_URL%/servicos/laudos-tecnicos/"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Laudo de Cobertura Vegetal", "url": "%VITE_SITE_URL%/servicos/cobertura-vegetal/"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Biólogo", "url": "%VITE_SITE_URL%/servicos/biologo/"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Poda de Árvores", "url": "%VITE_SITE_URL%/servicos/poda/"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Remoção de Árvores", "url": "%VITE_SITE_URL%/servicos/corte-arvores/"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Análise de Risco em Árvores", "url": "%VITE_SITE_URL%/servicos/analise-risco/"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Plantios Compensatórios", "url": "%VITE_SITE_URL%/servicos/plantios-compensatorios/"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Autorizações Ambientais", "url": "%VITE_SITE_URL%/servicos/autorizacoes/"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Consultoria Ambiental", "url": "%VITE_SITE_URL%/servicos/consultoria-ambiental/"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Licenciamento Ambiental", "url": "%VITE_SITE_URL%/servicos/licenciamento-ambiental/"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "ART", "url": "%VITE_SITE_URL%/servicos/art/"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Responsabilidade Técnica", "url": "%VITE_SITE_URL%/servicos/rt/"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Monitoramento de Vegetação", "url": "%VITE_SITE_URL%/servicos/monitoramento-vegetacao/"}}
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Laudos Técnicos", "url": "https://www.arbosolucoes.com/servicos/laudos-tecnicos/"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Laudo de Cobertura Vegetal", "url": "https://www.arbosolucoes.com/servicos/cobertura-vegetal/"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Biólogo", "url": "https://www.arbosolucoes.com/servicos/biologo/"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Poda de Árvores", "url": "https://www.arbosolucoes.com/servicos/poda/"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Remoção de Árvores", "url": "https://www.arbosolucoes.com/servicos/corte-arvores/"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Análise de Risco em Árvores", "url": "https://www.arbosolucoes.com/servicos/analise-risco/"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Plantios Compensatórios", "url": "https://www.arbosolucoes.com/servicos/plantios-compensatorios/"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Autorizações Ambientais", "url": "https://www.arbosolucoes.com/servicos/autorizacoes/"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Consultoria Ambiental", "url": "https://www.arbosolucoes.com/servicos/consultoria-ambiental/"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Licenciamento Ambiental", "url": "https://www.arbosolucoes.com/servicos/licenciamento-ambiental/"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "ART", "url": "https://www.arbosolucoes.com/servicos/art/"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Responsabilidade Técnica", "url": "https://www.arbosolucoes.com/servicos/rt/"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Monitoramento de Vegetação", "url": "https://www.arbosolucoes.com/servicos/monitoramento-vegetacao/"}}
         ]
       }
     }
