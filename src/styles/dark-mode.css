@@ -102,6 +102,35 @@
   background-color: hsl(var(--background));
 }
 
+/* Dark service benefits: contrast cards against section-gradient */
+.dark .service-benefits:not(.service-benefits--alt) .service-benefits__card {
+  background-color: hsl(var(--background));
+}
+
+/* Dark footer: keep dark background with light text */
+.dark .footer {
+  background-color: hsl(40, 12%, 3%);
+}
+
+.dark .footer__brand-name,
+.dark .footer__col-title {
+  color: hsl(var(--foreground));
+}
+
+.dark .footer__tagline,
+.dark .footer__info,
+.dark .footer__nav-link {
+  color: hsl(var(--foreground) / 0.7);
+}
+
+.dark .footer__copyright {
+  color: hsl(var(--foreground) / 0.4);
+}
+
+.dark .footer__bottom {
+  border-color: hsl(var(--foreground) / 0.1);
+}
+
 /* Dark mode image adjustments */
 .dark img {
   filter: brightness(0.9);
