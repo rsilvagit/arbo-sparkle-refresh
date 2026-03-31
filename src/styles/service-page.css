@@ -232,7 +232,7 @@
   gap: 1rem;
   padding: 2rem 1.5rem;
   border-radius: 0.75rem;
-  background-color: hsl(var(--background));
+  background-color: hsl(var(--card));
   border: 1px solid hsl(var(--border));
   transition: all 0.3s ease;
 }

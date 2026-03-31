@@ -87,9 +87,19 @@ img.clients__logo--dark {
   display: none;
 }
 
+.dark img.clients__logo--light:only-child {
+  display: block;
+  filter: brightness(1.1);
+}
+
 .dark img.clients__logo--dark {
   display: block;
   opacity: 0.7;
+}
+
+.dark img.clients__logo--dark[src*=".jpg"] {
+  mix-blend-mode: lighten;
+  opacity: 1;
 }
 
 .dark .clients__card:hover .clients__logo--dark {

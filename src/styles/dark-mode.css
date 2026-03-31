@@ -97,6 +97,11 @@
   color: hsl(0, 0%, 100%);
 }
 
+/* Dark testimonials: match differentials card style */
+.dark .testimonials__card {
+  background-color: hsl(var(--background));
+}
+
 /* Dark mode image adjustments */
 .dark img {
   filter: brightness(0.9);
