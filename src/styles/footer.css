@@ -84,6 +84,6 @@
 
 .footer__copyright {
   font-family: var(--font-sans);
-  color: hsl(var(--background) / 0.4);
+  color: hsl(var(--background) / 0.78);
   font-size: 0.875rem;
 }

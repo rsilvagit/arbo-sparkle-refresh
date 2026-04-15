@@ -29,7 +29,7 @@
 .cookie-consent__text p {
   font-family: var(--font-sans);
   font-size: 0.875rem;
-  color: hsl(var(--muted-foreground));
+  color: hsl(var(--foreground) / 0.85);
   line-height: 1.625;
   margin: 0;
 }
@@ -65,8 +65,8 @@
 
 .cookie-consent__btn--outline {
   background: transparent;
-  border: 1px solid hsl(var(--border));
-  color: hsl(var(--muted-foreground));
+  border: 1px solid hsl(var(--foreground) / 0.4);
+  color: hsl(var(--foreground) / 0.85);
 }
 
 .cookie-consent__btn--outline:hover {
