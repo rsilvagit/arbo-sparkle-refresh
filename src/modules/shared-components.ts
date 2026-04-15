@@ -1,7 +1,7 @@
 import { WHATSAPP_NUMBER, WHATSAPP_DISPLAY, BASE_PATH } from './config';
 
 const BASE = BASE_PATH;
-const LOGO = `${BASE_PATH}images/logo.png`;
+const LOGO = `${BASE_PATH}images/logo.webp`;
 
 function isHomePage(): boolean {
   const path = window.location.pathname;
