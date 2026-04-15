@@ -1,0 +1,23 @@
+/*
+ * Calibrated font fallbacks to eliminate CLS from FOUT.
+ * Values derived so fallback glyph metrics match the web fonts' box,
+ * preventing layout shift when the real font swaps in.
+ */
+
+@font-face {
+  font-family: 'Playfair Display Fallback';
+  src: local('Times New Roman'), local('Times');
+  size-adjust: 109.47%;
+  ascent-override: 93.27%;
+  descent-override: 22.66%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: 'Source Sans 3 Fallback';
+  src: local('Arial'), local('Helvetica');
+  size-adjust: 100.26%;
+  ascent-override: 100.76%;
+  descent-override: 27.87%;
+  line-gap-override: 0%;
+}
