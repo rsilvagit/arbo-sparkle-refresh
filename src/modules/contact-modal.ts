@@ -22,7 +22,18 @@ function clearStatus(el: HTMLElement): void {
 
 /* ── Init ── */
 
+let initialized = false;
+
+export function openContactModal(): void {
+  const dialog = document.getElementById('contact-dialog') as HTMLDialogElement | null;
+  if (!dialog) return;
+  dialog.showModal();
+  document.body.classList.add('menu-open');
+}
+
 export function initContactModal(): void {
+  if (initialized) return;
+  initialized = true;
   const dialog = document.getElementById('contact-dialog') as HTMLDialogElement;
   const form = document.getElementById('contact-form') as HTMLFormElement;
   const closeBtn = document.getElementById('dialog-close-btn')!;
