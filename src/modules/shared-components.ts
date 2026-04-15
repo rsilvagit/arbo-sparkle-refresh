@@ -123,23 +123,23 @@ export function renderContactModal(): string {
           <div class="form-group">
             <label for="cnpj" class="form-label">CNPJ *</label>
             <div class="form-input-with-status">
-              <input type="text" id="cnpj" name="cnpj" placeholder="XX.XXX.XXX/XXXX-XX" maxlength="18" class="form-input" />
+              <input type="text" id="cnpj" name="cnpj" placeholder="XX.XXX.XXX/XXXX-XX" maxlength="18" class="form-input" autocomplete="off" />
               <span id="cnpj-status" class="form-input-status"></span>
             </div>
           </div>
         </div>
         <div class="form-group">
           <label for="name" id="name-label" class="form-label">Nome *</label>
-          <input type="text" id="name" name="name" placeholder="Seu nome completo" maxlength="100" class="form-input" />
+          <input type="text" id="name" name="name" placeholder="Seu nome completo" maxlength="100" class="form-input" autocomplete="name" />
         </div>
         <div class="form-row">
           <div class="form-group">
             <label for="phone" class="form-label">Telefone *</label>
-            <input type="tel" id="phone" name="phone" placeholder="(DDD) 99999-9999" maxlength="20" class="form-input" />
+            <input type="tel" id="phone" name="phone" placeholder="(DDD) 99999-9999" maxlength="20" class="form-input" autocomplete="tel" />
           </div>
           <div class="form-group">
             <label for="email" class="form-label">E-mail *</label>
-            <input type="email" id="email" name="email" placeholder="seu@email.com" maxlength="255" class="form-input" />
+            <input type="email" id="email" name="email" placeholder="seu@email.com" maxlength="255" class="form-input" autocomplete="email" />
           </div>
         </div>
         <!-- Endereço estruturado -->
@@ -147,33 +147,33 @@ export function renderContactModal(): string {
           <div class="form-group form-group--cep">
             <label for="cep" class="form-label">CEP</label>
             <div class="form-input-with-status">
-              <input type="text" id="cep" name="cep" placeholder="XXXXX-XXX" maxlength="9" class="form-input" />
+              <input type="text" id="cep" name="cep" placeholder="XXXXX-XXX" maxlength="9" class="form-input" autocomplete="postal-code" />
               <span id="cep-status" class="form-input-status"></span>
             </div>
           </div>
           <div class="form-group form-group--logradouro">
             <label for="logradouro" class="form-label">Logradouro</label>
-            <input type="text" id="logradouro" name="logradouro" placeholder="Rua / Avenida" maxlength="200" class="form-input" />
+            <input type="text" id="logradouro" name="logradouro" placeholder="Rua / Avenida" maxlength="200" class="form-input" autocomplete="address-line1" />
           </div>
         </div>
         <div class="form-row">
           <div class="form-group">
             <label for="numero" class="form-label">Número</label>
-            <input type="text" id="numero" name="numero" placeholder="Nº" maxlength="10" class="form-input" />
+            <input type="text" id="numero" name="numero" placeholder="Nº" maxlength="10" class="form-input" autocomplete="address-line2" />
           </div>
           <div class="form-group">
             <label for="bairro" class="form-label">Bairro</label>
-            <input type="text" id="bairro" name="bairro" placeholder="Bairro" maxlength="100" class="form-input" />
+            <input type="text" id="bairro" name="bairro" placeholder="Bairro" maxlength="100" class="form-input" autocomplete="address-level3" />
           </div>
         </div>
         <div class="form-row form-row--cidade">
           <div class="form-group form-group--cidade">
             <label for="cidade" class="form-label">Cidade</label>
-            <input type="text" id="cidade" name="cidade" placeholder="Cidade" maxlength="100" class="form-input" />
+            <input type="text" id="cidade" name="cidade" placeholder="Cidade" maxlength="100" class="form-input" autocomplete="address-level2" />
           </div>
           <div class="form-group form-group--uf">
             <label for="uf" class="form-label">UF</label>
-            <input type="text" id="uf" name="uf" placeholder="RS" maxlength="2" class="form-input" />
+            <input type="text" id="uf" name="uf" placeholder="RS" maxlength="2" class="form-input" autocomplete="address-level1" />
           </div>
         </div>
         <div class="form-group">
