@@ -32,11 +32,8 @@
     <meta name="geo.region" content="BR-RS" />
     <meta name="geo.placename" content="Porto Alegre" />
 
-    <!-- Preload hero background for faster LCP -->
-    <link rel="preload" as="image" href="/images/hero-bg-480w.webp" type="image/webp" media="(max-width: 480px)" />
-    <link rel="preload" as="image" href="/images/hero-bg-768w.webp" type="image/webp" media="(min-width: 481px) and (max-width: 768px)" />
-    <link rel="preload" as="image" href="/images/hero-bg-1024w.webp" type="image/webp" media="(min-width: 769px) and (max-width: 1024px)" />
-    <link rel="preload" as="image" href="/images/hero-bg-1920w.webp" type="image/webp" media="(min-width: 1025px)" />
+    <!-- Hero LCP image is delivered via <picture> + fetchpriority="high" below -->
+    <link rel="preload" as="image" href="/images/logo.webp" type="image/webp" fetchpriority="high" />
 
     <!-- Google Fonts (preconnect + non-blocking load) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -224,7 +221,30 @@
 
     <!-- ===== HERO ===== -->
     <section class="hero" id="hero">
-      <div class="hero__bg"></div>
+      <picture class="hero__bg" aria-hidden="true">
+        <source
+          type="image/avif"
+          srcset="/images/hero-bg-480w.avif 480w, /images/hero-bg-768w.avif 768w, /images/hero-bg-1024w.avif 1024w, /images/hero-bg-1920w.avif 1920w"
+          sizes="100vw"
+        />
+        <source
+          type="image/webp"
+          srcset="/images/hero-bg-480w.webp 480w, /images/hero-bg-768w.webp 768w, /images/hero-bg-1024w.webp 1024w, /images/hero-bg-1920w.webp 1920w"
+          sizes="100vw"
+        />
+        <img
+          class="hero__bg-img"
+          src="/images/hero-bg-1024w.webp"
+          srcset="/images/hero-bg-480w.webp 480w, /images/hero-bg-768w.webp 768w, /images/hero-bg-1024w.webp 1024w, /images/hero-bg-1920w.webp 1920w"
+          sizes="100vw"
+          alt=""
+          fetchpriority="high"
+          decoding="async"
+          loading="eager"
+          width="1920"
+          height="800"
+        />
+      </picture>
       <div class="hero__overlay"></div>
       <div class="hero__content container">
         <div class="hero__inner hero__text">

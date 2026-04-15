@@ -10,39 +10,17 @@
 .hero__bg {
   position: absolute;
   inset: 0;
-  background-image: url('/images/hero-bg-480w.webp');
-  background-size: cover;
-  background-position: center;
+  display: block;
+  overflow: hidden;
 }
 
-@media (min-width: 481px) {
-  .hero__bg {
-    background-image: url('/images/hero-bg-768w.webp');
-  }
-}
-
-@media (min-width: 769px) {
-  .hero__bg {
-    background-image: url('/images/hero-bg-1024w.webp');
-  }
-}
-
-@media (min-width: 1025px) {
-  .hero__bg {
-    background-image: url('/images/hero-bg-1920w.webp');
-  }
-}
-
-/* JPEG fallback for browsers without WebP */
-@supports not (background-image: url('/images/hero-bg-480w.webp')) {
-  .hero__bg {
-    background-image: url('/images/hero-bg-768w.jpg');
-  }
-  @media (min-width: 769px) {
-    .hero__bg {
-      background-image: url('/images/hero-bg.jpg');
-    }
-  }
+.hero__bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .hero__overlay {
@@ -103,11 +81,13 @@
   max-width: 42rem;
   margin: 0 auto 2rem;
   line-height: 1.625;
+  min-height: calc(1.125rem * 1.625 * 2);
 }
 
 @media (min-width: 768px) {
   .hero__subtitle {
     font-size: 1.25rem;
+    min-height: calc(1.25rem * 1.625 * 2);
   }
 }
 
