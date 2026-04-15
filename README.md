@@ -1,73 +1,59 @@
-# Welcome to your Lovable project
+# Arbo Soluções
 
-## Project info
+Site institucional da **Arbo Soluções** — consultoria ambiental e manejo de vegetação urbana em Porto Alegre (CRBio-03).
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+Produção: https://www.arbosolucoes.com
 
-## How can I edit this code?
+## Stack
 
-There are several ways of editing your application.
+- **Vite 5** + **TypeScript** (sem framework — vanilla TS + DOM)
+- **CSS puro** modular em `src/styles/` (sem Tailwind, sem pós-processadores além do próprio Vite)
+- **HTML estático** multi-página (`index.html` + `servicos/*/index.html`)
+- **sharp** e **lighthouse** como ferramentas de build/auditoria (devDependencies)
+- **vite-plugin-sitemap** para geração de `sitemap.xml`
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+## Scripts
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+npm install           # instala dependências
+npm run dev           # servidor de desenvolvimento (vite)
+npm run build         # build de produção em dist/
+npm run preview       # serve o build de produção localmente
 ```
 
-**Edit a file directly in GitHub**
+Scripts utilitários (Node, rodam manualmente):
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```sh
+node scripts/generate-avif.mjs   # gera variantes AVIF do hero a partir dos .webp
+```
 
-**Use GitHub Codespaces**
+## Estrutura
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```
+├── index.html                 # home
+├── servicos/                  # 13 service pages (cada uma com index.html próprio)
+├── public/
+│   ├── data/                  # clients.json, testimonials.json (fetch em runtime)
+│   └── images/
+│       ├── hero-bg-*.{avif,webp}
+│       ├── logo.webp, og-image.{png,webp}
+│       └── clients/           # logos em .webp (light + dark)
+├── src/
+│   ├── main.ts                # entry point
+│   ├── modules/               # clients, testimonials, navbar, contact-modal, etc.
+│   └── styles/                # CSS modular por componente
+└── scripts/
+    └── generate-avif.mjs      # otimização de imagens
+```
 
-## What technologies are used for this project?
+## Performance — notas de arquitetura
 
-This project is built with:
+- **LCP**: hero usa `<picture>` com `<source type="image/avif">` + `<source type="image/webp">` + `<img fetchpriority="high" loading="eager">` (não é CSS `background-image`) para ser descoberto pelo preload scanner.
+- **Imagens**: AVIF para o hero (14–22% menor que WebP); WebP para logo, og-image e logos de clientes. Sem raster `.png`/`.jpg` em `public/images/`.
+- **JS**: `contact-modal` e `related-services` são carregados via `import()` dinâmico (lazy).
+- **Dados de conteúdo** (clientes, testimonials): `fetch` em runtime — não são importados estaticamente nos bundles.
+- **CLS**: `min-height` reservado no `.hero__subtitle`; fontes carregam com `display=swap` + media toggle via `onload`.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Deploy
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Build estático em `dist/`. Pode ser servido por qualquer CDN/host de static sites (Netlify, Vercel, Cloudflare Pages, S3 + CloudFront, nginx, etc.). Recomenda-se cache imutável (1 ano) para assets em `/images/` e `/assets/`, e cache curto para HTML.
