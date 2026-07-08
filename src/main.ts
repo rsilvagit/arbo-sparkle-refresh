@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   injectSharedComponents();
   initDarkMode();
   initNavbar();
+  initCookieConsent();
   await initTestimonials();
   await initClients();
   initScrollAnimator();
@@ -43,5 +44,4 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   setupLazyContactModal();
   initFooter();
-  initCookieConsent();
 });
