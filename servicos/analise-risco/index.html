@@ -264,17 +264,20 @@
 </main>
 
 <script type="module" src="/src/main.ts"></script>
-    <!-- Google tag (gtag.js) - deferred to avoid blocking FCP -->
+    <!-- Google tag (gtag.js) - dataLayer/gtag ready immediately, library load deferred to avoid blocking FCP -->
     <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', 'G-V75B8MZB7W');
+      gtag('config', 'AW-952816234');
+
       window.addEventListener('load', function() {
         var s = document.createElement('script');
         s.src = 'https://www.googletagmanager.com/gtag/js?id=G-V75B8MZB7W';
         s.async = true;
         document.head.appendChild(s);
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-V75B8MZB7W');
       });
     </script>
 </body>

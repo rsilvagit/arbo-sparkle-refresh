@@ -1,5 +1,6 @@
 import { WHATSAPP_NUMBER } from './config';
 import { showToast } from './toast';
+import { trackConversion } from './analytics';
 import {
   applyCnpjMask,
   applyCepMask,
@@ -239,6 +240,8 @@ export function initContactModal(): void {
       return;
     }
     errorEl.hidden = true;
+
+    trackConversion();
 
     // Build address string
     const addressParts = [logradouro, numero, bairro, cidade, uf, cep].filter(Boolean);
