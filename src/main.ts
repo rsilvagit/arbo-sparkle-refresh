@@ -8,6 +8,7 @@ import { initTestimonials } from './modules/testimonials';
 import { initClients } from './modules/clients';
 import { initDarkMode } from './modules/dark-mode';
 import { initCityFlip } from './modules/city-flip';
+import { initContactLinks } from './modules/contact-links';
 
 function isServicePage(): boolean {
   return window.location.pathname.includes('/servicos/');
@@ -43,5 +44,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   setupLazyContactModal();
+  initContactLinks();
   initFooter();
 });
