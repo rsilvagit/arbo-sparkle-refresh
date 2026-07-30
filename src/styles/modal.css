@@ -125,6 +125,13 @@
   appearance: auto;
 }
 
+.form-hint {
+  margin: -0.5rem 0 0;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+}
+
 .form-error {
   padding: 0.625rem 0.75rem;
   border-radius: calc(var(--radius) - 2px);
