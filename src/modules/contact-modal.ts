@@ -230,7 +230,14 @@ export function initContactModal(): void {
     const errorEl = document.getElementById('form-error')!;
     const missing: string[] = [];
     if (!name) missing.push(personType === 'pj' ? 'razão social' : 'nome');
-    if (!phone && !email) missing.push('telefone ou e-mail');
+
+    if (!phone && !email) {
+      missing.push('telefone ou e-mail');
+    } else {
+      if (phone && extractDigits(phone).length < 10) missing.push('telefone válido (com DDD)');
+      if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) missing.push('e-mail válido');
+    }
+
     if (!serviceType) missing.push('tipo de manejo');
     if (personType === 'pj' && extractDigits(cnpj).length !== 14) missing.push('CNPJ');
 

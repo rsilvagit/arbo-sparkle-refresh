@@ -134,14 +134,15 @@ export function renderContactModal(): string {
         </div>
         <div class="form-row">
           <div class="form-group">
-            <label for="phone" class="form-label">Telefone *</label>
+            <label for="phone" class="form-label">Telefone</label>
             <input type="tel" id="phone" name="phone" placeholder="(DDD) 99999-9999" maxlength="20" class="form-input" autocomplete="tel" />
           </div>
           <div class="form-group">
-            <label for="email" class="form-label">E-mail *</label>
+            <label for="email" class="form-label">E-mail</label>
             <input type="email" id="email" name="email" placeholder="seu@email.com" maxlength="255" class="form-input" autocomplete="email" />
           </div>
         </div>
+        <p class="form-hint">* Informe pelo menos um: telefone ou e-mail</p>
         <!-- Endereço estruturado -->
         <div class="form-row form-row--cep">
           <div class="form-group form-group--cep">
