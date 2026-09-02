@@ -110,6 +110,8 @@ function getCurrentServiceSlug(): string | null {
 }
 
 export function injectRelatedServices(): void {
+  if (document.querySelector('.related-services')) return;
+
   const currentSlug = getCurrentServiceSlug();
   if (!currentSlug) return;
 
