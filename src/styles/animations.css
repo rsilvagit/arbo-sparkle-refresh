@@ -18,8 +18,10 @@
   50% { transform: translateX(-50%) translateY(-25%); }
 }
 
-/* Elements waiting for scroll trigger */
-.anim-target {
+/* Elements waiting for scroll trigger.
+   Gated behind .js-anim (set by main.ts) so content stays visible by
+   default if JS fails/is blocked, instead of being permanently hidden. */
+.js-anim .anim-target {
   opacity: 0;
 }
 
@@ -55,4 +57,15 @@
 
 .animate-bounce {
   animation: bounce 1s infinite;
+}
+
+/* Users/agents that opt out of motion get content immediately, no animation */
+@media (prefers-reduced-motion: reduce) {
+  .js-anim .anim-target,
+  .hero__text,
+  .hero__scroll-indicator {
+    opacity: 1;
+    animation: none;
+    transform: none;
+  }
 }

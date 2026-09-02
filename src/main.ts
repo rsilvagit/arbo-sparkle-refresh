@@ -28,22 +28,36 @@ function setupLazyContactModal(): void {
   triggers.forEach(btn => btn.addEventListener('click', handler, { once: true }));
 }
 
+async function safely(fn: () => void | Promise<void>): Promise<void> {
+  try {
+    await fn();
+  } catch (err) {
+    console.error(err);
+  }
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
-  injectSharedComponents();
-  initDarkMode();
-  initNavbar();
-  initCookieConsent();
-  await initTestimonials();
-  await initClients();
-  initScrollAnimator();
-  initCityFlip();
+  await safely(() => injectSharedComponents());
+  await safely(() => initDarkMode());
+  await safely(() => initNavbar());
+  await safely(() => initCookieConsent());
+  await safely(() => initTestimonials());
+  await safely(() => initClients());
+
+  // Only hide .anim-target content once the observer that reveals it is live.
+  document.documentElement.classList.add('js-anim');
+  await safely(() => initScrollAnimator());
+
+  await safely(() => initCityFlip());
 
   if (isServicePage()) {
-    const { injectRelatedServices } = await import('./modules/related-services');
-    injectRelatedServices();
+    await safely(async () => {
+      const { injectRelatedServices } = await import('./modules/related-services');
+      injectRelatedServices();
+    });
   }
 
-  setupLazyContactModal();
-  initContactLinks();
-  initFooter();
+  await safely(() => setupLazyContactModal());
+  await safely(() => initContactLinks());
+  await safely(() => initFooter());
 });
