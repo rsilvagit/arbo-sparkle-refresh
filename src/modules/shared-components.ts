@@ -1,7 +1,8 @@
-import { WHATSAPP_NUMBER, WHATSAPP_DISPLAY, BASE_PATH } from './config';
+import { WHATSAPP_NUMBER, WHATSAPP_DISPLAY, WHATSAPP_DEFAULT_MESSAGE, BASE_PATH } from './config';
 
 const BASE = BASE_PATH;
 const LOGO = `${BASE_PATH}images/logo.webp`;
+const WHATSAPP_HREF = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_DEFAULT_MESSAGE)}`;
 
 function isHomePage(): boolean {
   const path = window.location.pathname;
@@ -35,13 +36,13 @@ export function renderNavbar(): string {
         ${navLink('#quem-somos', 'Quem Somos', 'Conheça a Arbo Soluções')}
         ${navLink('#servicos', 'Serviços', 'Nossos serviços ambientais')}
         ${navLink('#contato', 'Contato', 'Entre em contato')}
-        <a href="https://wa.me/${WHATSAPP_NUMBER}" target="_blank" rel="noopener noreferrer" class="navbar__cta" title="Fale conosco pelo WhatsApp" aria-label="Ligar para ${WHATSAPP_DISPLAY}">${WHATSAPP_DISPLAY}</a>
+        <a href="${WHATSAPP_HREF}" target="_blank" rel="noopener noreferrer" class="navbar__cta" title="Fale conosco pelo WhatsApp" aria-label="Ligar para ${WHATSAPP_DISPLAY}">${WHATSAPP_DISPLAY}</a>
         <button class="theme-toggle" aria-label="Alternar tema">
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
         </button>
       </nav>
       <div class="navbar__mobile-actions">
-        <a href="https://wa.me/${WHATSAPP_NUMBER}" target="_blank" rel="noopener noreferrer" class="navbar__mobile-cta" title="Fale conosco pelo WhatsApp" aria-label="Contato via WhatsApp">
+        <a href="${WHATSAPP_HREF}" target="_blank" rel="noopener noreferrer" class="navbar__mobile-cta" title="Fale conosco pelo WhatsApp" aria-label="Contato via WhatsApp">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         </a>
         <button class="navbar__hamburger" id="hamburger-btn" aria-label="Menu" aria-expanded="false">
@@ -54,7 +55,7 @@ export function renderNavbar(): string {
       ${mobileNavLink('#quem-somos', 'Quem Somos', 'Conheça a Arbo Soluções')}
       ${mobileNavLink('#servicos', 'Serviços', 'Nossos serviços ambientais')}
       ${mobileNavLink('#contato', 'Contato', 'Entre em contato')}
-      <a href="https://wa.me/${WHATSAPP_NUMBER}" target="_blank" rel="noopener noreferrer" class="navbar__mobile-phone" title="Fale conosco pelo WhatsApp" aria-label="Ligar para ${WHATSAPP_DISPLAY}">${WHATSAPP_DISPLAY}</a>
+      <a href="${WHATSAPP_HREF}" target="_blank" rel="noopener noreferrer" class="navbar__mobile-phone" title="Fale conosco pelo WhatsApp" aria-label="Ligar para ${WHATSAPP_DISPLAY}">${WHATSAPP_DISPLAY}</a>
       <button class="theme-toggle theme-toggle--mobile" aria-label="Alternar tema">
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
       </button>
@@ -90,7 +91,7 @@ export function renderFooter(): string {
             <a href="${prefix}#quem-somos" class="footer__nav-link" title="Conheça a Arbo Soluções">Quem Somos</a>
             <a href="${prefix}#servicos" class="footer__nav-link" title="Nossos serviços ambientais">Serviços</a>
             <a href="${prefix}#contato" class="footer__nav-link" title="Entre em contato">Contato</a>
-            <a href="https://wa.me/${WHATSAPP_NUMBER}" target="_blank" rel="noopener noreferrer" class="footer__nav-link" title="Fale conosco pelo WhatsApp" aria-label="Contato via WhatsApp">WhatsApp</a>
+            <a href="${WHATSAPP_HREF}" target="_blank" rel="noopener noreferrer" class="footer__nav-link" title="Fale conosco pelo WhatsApp" aria-label="Contato via WhatsApp">WhatsApp</a>
           </nav>
         </div>
       </div>
