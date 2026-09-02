@@ -10,10 +10,6 @@ import { initDarkMode } from './modules/dark-mode';
 import { initCityFlip } from './modules/city-flip';
 import { initContactLinks } from './modules/contact-links';
 
-function isServicePage(): boolean {
-  return window.location.pathname.includes('/servicos/');
-}
-
 function setupLazyContactModal(): void {
   const triggers = document.querySelectorAll<HTMLElement>('[data-open-modal="contact"]');
   if (triggers.length === 0) return;
@@ -49,13 +45,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   await safely(() => initScrollAnimator());
 
   await safely(() => initCityFlip());
-
-  if (isServicePage()) {
-    await safely(async () => {
-      const { injectRelatedServices } = await import('./modules/related-services');
-      injectRelatedServices();
-    });
-  }
 
   await safely(() => setupLazyContactModal());
   await safely(() => initContactLinks());
