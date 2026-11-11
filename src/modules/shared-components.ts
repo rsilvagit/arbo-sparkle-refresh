@@ -1,8 +1,7 @@
-import { WHATSAPP_NUMBER, WHATSAPP_DISPLAY, WHATSAPP_DEFAULT_MESSAGE, BASE_PATH } from './config';
+import { WHATSAPP_DISPLAY, BASE_PATH, buildWhatsappHref } from './config';
 
 const BASE = BASE_PATH;
 const LOGO = `${BASE_PATH}images/logo.webp`;
-const WHATSAPP_HREF = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_DEFAULT_MESSAGE)}`;
 
 function isHomePage(): boolean {
   const path = window.location.pathname;
@@ -24,6 +23,7 @@ function mobileNavLink(hash: string, label: string, title: string, cls = 'navbar
 
 export function renderNavbar(): string {
   const home = isHomePage() ? '/' : BASE;
+  const WHATSAPP_HREF = buildWhatsappHref();
   return `
   <header id="navbar" class="navbar">
     <div class="container navbar__inner">
@@ -65,6 +65,7 @@ export function renderNavbar(): string {
 
 export function renderFooter(): string {
   const prefix = isHomePage() ? '' : BASE;
+  const WHATSAPP_HREF = buildWhatsappHref();
   return `
   <footer class="footer">
     <div class="container">

@@ -1,4 +1,4 @@
-import { WHATSAPP_NUMBER } from './config';
+import { WHATSAPP_NUMBER, getPageService } from './config';
 import { showToast } from './toast';
 import { trackContactConversion } from './analytics';
 import {
@@ -25,9 +25,17 @@ function clearStatus(el: HTMLElement): void {
 
 let initialized = false;
 
+/** Pré-seleciona "Tipo de Manejo" com o serviço da página atual, sem sobrescrever escolha do usuário. */
+function preselectServiceFromPage(): void {
+  const select = document.getElementById('serviceType') as HTMLSelectElement | null;
+  const option = getPageService()?.modalOption;
+  if (select && option && !select.value) select.value = option;
+}
+
 export function openContactModal(): void {
   const dialog = document.getElementById('contact-dialog') as HTMLDialogElement | null;
   if (!dialog) return;
+  preselectServiceFromPage();
   dialog.showModal();
   document.body.classList.add('menu-open');
 }
@@ -52,6 +60,7 @@ export function initContactModal(): void {
   /* ── Dialog open / close ── */
 
   const openDialog = () => {
+    preselectServiceFromPage();
     dialog.showModal();
     document.body.classList.add('menu-open');
   };
@@ -260,9 +269,11 @@ export function initContactModal(): void {
     const quoteId = `${last4}/${new Date().getFullYear()}`;
 
     // Build WhatsApp message
+    const pageService = getPageService();
     const lines: string[] = [
       '*Solicitação de Orçamento*',
       `*ID:* ${quoteId}`,
+      `*Origem:* Site Arbo Soluções${pageService ? ` - página de ${pageService.label}` : ''}`,
       '',
       `*Tipo:* ${personType === 'pj' ? 'Pessoa Jurídica' : 'Pessoa Física'}`,
     ];
